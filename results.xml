@@ -1,0 +1,6 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="19.268629999999998">
+<testsuite name="announcement.spec.ts" timestamp="2025-02-04T12:39:48.859Z" hostname="Chromium" tests="1" failures="0" skipped="0" time="17.783" errors="0">
+<testcase name="Announcement and Acknowledgment Tests › Create basic announcement" classname="announcement.spec.ts" time="17.783">
+</testcase>
+</testsuite>
+</testsuites>
