@@ -48,7 +48,7 @@
       {
         "outputDir": "C:/Users/mohammed.feroz/Desktop/Engage-automation/test-results",
         "repeatEach": 1,
-        "retries": 0,
+        "retries": 1,
         "metadata": {},
         "id": "Chromium",
         "name": "Chromium",
@@ -57,12 +57,12 @@
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
         ],
-        "timeout": 30000
+        "timeout": 60000
       }
     ],
     "shard": null,
     "updateSnapshots": "missing",
-    "updateSourceMethod": "3way",
+    "updateSourceMethod": "patch",
     "version": "1.50.1",
     "workers": 8,
     "webServer": null
@@ -87,7 +87,7 @@
               "tags": [],
               "tests": [
                 {
-                  "timeout": 30000,
+                  "timeout": 60000,
                   "annotations": [],
                   "expectedStatus": "passed",
                   "projectId": "Chromium",
@@ -96,12 +96,12 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 17783,
+                      "duration": 8865,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-02-04T12:39:49.368Z",
+                      "startTime": "2025-02-06T13:09:31.842Z",
                       "attachments": []
                     }
                   ],
@@ -112,6 +112,230 @@
               "file": "announcement.spec.ts",
               "line": 22,
               "column": 7
+            },
+            {
+              "title": "Create and save annoucement as draft",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Chromium",
+                  "projectName": "Chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 9301,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-02-06T13:09:40.888Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c5c4f3ebfbbd89b5f739-34a33569c135aefaaa1d",
+              "file": "announcement.spec.ts",
+              "line": 29,
+              "column": 7
+            },
+            {
+              "title": "Update draft announcement and published",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Chromium",
+                  "projectName": "Chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 11815,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-02-06T13:09:50.201Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c5c4f3ebfbbd89b5f739-76dcba560a522d19af35",
+              "file": "announcement.spec.ts",
+              "line": 36,
+              "column": 7
+            },
+            {
+              "title": "create annoucement and save as draft then delete the annoucement",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Chromium",
+                  "projectName": "Chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 9186,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-02-06T13:10:02.027Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c5c4f3ebfbbd89b5f739-483b59acbd39ffb22ca6",
+              "file": "announcement.spec.ts",
+              "line": 43,
+              "column": 6
+            },
+            {
+              "title": "Create announcement without description and verify error message",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Chromium",
+                  "projectName": "Chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 7666,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-02-06T13:10:11.232Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c5c4f3ebfbbd89b5f739-0ea08f6bd3ec7321fcf1",
+              "file": "announcement.spec.ts",
+              "line": 51,
+              "column": 6
+            },
+            {
+              "title": "create annoucement without title  and verify error message",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Chromium",
+                  "projectName": "Chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 8428,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-02-06T13:10:18.909Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c5c4f3ebfbbd89b5f739-61d4616167fb3d701416",
+              "file": "announcement.spec.ts",
+              "line": 59,
+              "column": 6
+            },
+            {
+              "title": "create announcement with acknowledgement",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Chromium",
+                  "projectName": "Chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 10910,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-02-06T13:10:27.344Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c5c4f3ebfbbd89b5f739-0d33d3026eef702f8ba8",
+              "file": "announcement.spec.ts",
+              "line": 66,
+              "column": 6
+            },
+            {
+              "title": "create annoucement from wall for organization",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Chromium",
+                  "projectName": "Chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 15676,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-02-06T13:10:38.271Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c5c4f3ebfbbd89b5f739-46217a7cfe1a33ba5492",
+              "file": "announcement.spec.ts",
+              "line": 70,
+              "column": 5
             }
           ]
         }
@@ -120,9 +344,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-02-04T12:39:48.327Z",
-    "duration": 19268.629999999997,
-    "expected": 1,
+    "startTime": "2025-02-06T13:09:31.208Z",
+    "duration": 83124.248,
+    "expected": 8,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

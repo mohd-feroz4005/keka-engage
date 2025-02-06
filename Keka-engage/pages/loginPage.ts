@@ -41,8 +41,8 @@ export class KekaLoginPage extends BasePage {
     await this.page.fill(this.captchaField, '12345');
     await this.page.click(this.submitButton);
     await this.page.click(this.tenantSelect);
-    await this.page.locator(this.invoicePopup).isVisible();
-    await this.page.locator(this.closeInvoiceButton).click();
+   // await this.page.locator(this.invoicePopup).isVisible();
+    //await this.page.locator(this.closeInvoiceButton).click();
     //await this.waitForNetworkIdle();
     if (await this.page.locator(this.homeIcon).isVisible()) {
       await this.page.goto(Anno_URL)

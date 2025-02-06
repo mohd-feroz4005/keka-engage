@@ -1,6 +1,20 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="19.268629999999998">
-<testsuite name="announcement.spec.ts" timestamp="2025-02-04T12:39:48.859Z" hostname="Chromium" tests="1" failures="0" skipped="0" time="17.783" errors="0">
-<testcase name="Announcement and Acknowledgment Tests › Create basic announcement" classname="announcement.spec.ts" time="17.783">
+<testsuites id="" name="" tests="8" failures="0" skipped="0" errors="0" time="83.12424800000001">
+<testsuite name="announcement.spec.ts" timestamp="2025-02-06T13:09:31.243Z" hostname="Chromium" tests="8" failures="0" skipped="0" time="81.847" errors="0">
+<testcase name="Announcement and Acknowledgment Tests › Create basic announcement" classname="announcement.spec.ts" time="8.865">
+</testcase>
+<testcase name="Announcement and Acknowledgment Tests › Create and save annoucement as draft" classname="announcement.spec.ts" time="9.301">
+</testcase>
+<testcase name="Announcement and Acknowledgment Tests › Update draft announcement and published" classname="announcement.spec.ts" time="11.815">
+</testcase>
+<testcase name="Announcement and Acknowledgment Tests › create annoucement and save as draft then delete the annoucement" classname="announcement.spec.ts" time="9.186">
+</testcase>
+<testcase name="Announcement and Acknowledgment Tests › Create announcement without description and verify error message" classname="announcement.spec.ts" time="7.666">
+</testcase>
+<testcase name="Announcement and Acknowledgment Tests › create annoucement without title  and verify error message" classname="announcement.spec.ts" time="8.428">
+</testcase>
+<testcase name="Announcement and Acknowledgment Tests › create announcement with acknowledgement" classname="announcement.spec.ts" time="10.91">
+</testcase>
+<testcase name="Announcement and Acknowledgment Tests › create annoucement from wall for organization" classname="announcement.spec.ts" time="15.676">
 </testcase>
 </testsuite>
 </testsuites>

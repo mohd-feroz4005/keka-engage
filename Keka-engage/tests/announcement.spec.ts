@@ -21,46 +21,56 @@ test.describe('Announcement and Acknowledgment Tests', () => {
 
   test('Create basic announcement', async () => {
     await announcementPage.createBasicAnnouncement(TEST_ANNOUNCEMENT.title, TEST_ANNOUNCEMENT.description);
-   // await announcementPage.validateAnnouncementVisibility(TEST_ANNOUNCEMENT.title, true);
+    const toast = announcementPage.page.locator('//*[@id="toast-container"]');
+    await expect(toast).toBeVisible();
+    await expect(toast).toHaveText('Success!Announcement published successfully.');
   });
 
- /*  test('Create and save annoucement as draft', async () => {
+  test('Create and save annoucement as draft', async () => {
     await announcementPage.announcementdraft(TEST_ANNOUNCEMENT.title, TEST_ANNOUNCEMENT.description);
+    const toast = announcementPage.page.locator('//*[@id="toast-container"]');
+    await expect(toast).toBeVisible();
+    await expect(toast).toHaveText('Success!!Announcement saved successfully.');
   });
 
-  test('Create department-specific announcement', async () => {
-    await announcementPage.createDetailedAnnouncement({
-      title: TEST_ANNOUNCEMENT.title,
-      audience: TEST_ANNOUNCEMENT.department
-    });
-    await announcementPage.validateAnnouncementVisibility(TEST_ANNOUNCEMENT.title, true);
+  test('Update draft announcement and published', async () => {
+   await announcementPage.announcementdraft(TEST_ANNOUNCEMENT.title, TEST_ANNOUNCEMENT.description);
+   await announcementPage.updatedraftannouce();
+    const toast = announcementPage.page.locator('//*[@id="toast-container"]');
+    await expect(toast).toBeVisible();
+    await expect(toast).toHaveText('Success!Announcement published successfully.');
+  });
+ test('create annoucement and save as draft then delete the annoucement', async () => {
+    await announcementPage.announcementdraft(TEST_ANNOUNCEMENT.title, TEST_ANNOUNCEMENT.description);
+    
+    await announcementPage.deleteannouncement();
+    const toast = announcementPage.page.locator('//*[@id="toast-container"]');
+    await expect(toast).toBeVisible();
+    await expect(toast).toHaveText('Success!!Announcement deleted successfully.');
+  });
+ test('Create announcement without description and verify error message', async () => {
+ await announcementPage.createaanouncementwithoutdescription(TEST_ANNOUNCEMENT.title, '');
+    const toast = announcementPage.page.locator('//*[@id="toast-container"]');
+    await expect(toast).toBeVisible();
+    await expect(toast).toHaveText('Warning!!Title and Description are mandatory.');
+  
+ });
+
+ test ('create annoucement without title  and verify error message', async () => {
+await announcementPage.createaanouncementwithouttitle('',TEST_ANNOUNCEMENT.description);
+    const toast = announcementPage.page.locator('//*[@id="toast-container"]');
+    await expect(toast).toBeVisible();
+    await expect(toast).toHaveText('Warning!!Title and Description are mandatory.');
   });
 
-  test('Employee acknowledgment workflow', async ({ browser }) => {
-    // Admin creates announcement
-    const adminContext = await browser.newContext();
-    const adminPage = await adminContext.newPage();
-    const adminAnnouncement = new AnnouncementPage(adminPage);
-    const adminLogin = new KekaLoginPage(adminPage);
-    await adminLogin.navigateToLogin();
-    await adminLogin.loginAsAdmin();
-    await adminAnnouncement.createDetailedAnnouncement({
-      title: TEST_ANNOUNCEMENT.title,
-      requireAck: true
-    });
+ test ('create announcement with acknowledgement', async () => {
+ await announcementPage.createannouncementwithacknowledgement(TEST_ANNOUNCEMENT.title, TEST_ANNOUNCEMENT.description);
 
-    // Employee acknowledges
-    const empContext = await browser.newContext();
-    const empPage = await empContext.newPage();
-    const empAck = new AcknowledgmentPage(empPage);
-    const empLogin = new KekaLoginPage(empPage);
-    await empLogin.navigateToLogin();
-    await empLogin.loginAsEmployee();
-    await empAck.acknowledgeAnnouncement(TEST_ANNOUNCEMENT.title);
+ })
+test('create annoucement from wall for organization', async () => {
 
-    // Admin verifies acknowledgment
-    await adminAnnouncement.navigateToAnnouncements();
-    const ackPage = new AcknowledgmentPage(adminPage);
-    await ackPage.verifyAcknowledgment('emp_user');
-  });
- */});
+await announcementPage.navigatetodashboard();
+  await announcementPage.createannouncementfromwall(TEST_ANNOUNCEMENT.title, TEST_ANNOUNCEMENT.description);
+});
+
+});
