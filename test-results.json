@@ -78,43 +78,11 @@
         {
           "title": "Announcement and Acknowledgment Tests",
           "file": "announcement.spec.ts",
-          "line": 9,
+          "line": 7,
           "column": 6,
           "specs": [
             {
-              "title": "Create basic announcement",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 60000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "Chromium",
-                  "projectName": "Chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "status": "passed",
-                      "duration": 8865,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-02-06T13:09:31.842Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "c5c4f3ebfbbd89b5f739-5bb05bef7590801ed09b",
-              "file": "announcement.spec.ts",
-              "line": 22,
-              "column": 7
-            },
-            {
-              "title": "Create and save annoucement as draft",
+              "title": "Create and publish a basic announcement",
               "ok": true,
               "tags": [],
               "tests": [
@@ -133,20 +101,20 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-02-06T13:09:40.888Z",
+                      "startTime": "2025-02-06T18:04:48.827Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "c5c4f3ebfbbd89b5f739-34a33569c135aefaaa1d",
+              "id": "c5c4f3ebfbbd89b5f739-3150538f56f85798102e",
               "file": "announcement.spec.ts",
-              "line": 29,
+              "line": 20,
               "column": 7
             },
             {
-              "title": "Update draft announcement and published",
+              "title": "Create and save announcement as draft",
               "ok": true,
               "tags": [],
               "tests": [
@@ -160,25 +128,25 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 11815,
+                      "duration": 6841,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-02-06T13:09:50.201Z",
+                      "startTime": "2025-02-06T18:04:58.304Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "c5c4f3ebfbbd89b5f739-76dcba560a522d19af35",
+              "id": "c5c4f3ebfbbd89b5f739-84650d7a9db5b777720d",
               "file": "announcement.spec.ts",
-              "line": 36,
+              "line": 24,
               "column": 7
             },
             {
-              "title": "create annoucement and save as draft then delete the annoucement",
+              "title": "Update draft announcement and publish",
               "ok": true,
               "tags": [],
               "tests": [
@@ -192,22 +160,54 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 9186,
+                      "duration": 9324,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-02-06T13:10:02.027Z",
+                      "startTime": "2025-02-06T18:05:05.152Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "c5c4f3ebfbbd89b5f739-483b59acbd39ffb22ca6",
+              "id": "c5c4f3ebfbbd89b5f739-1db59228c64fa300120b",
               "file": "announcement.spec.ts",
-              "line": 43,
-              "column": 6
+              "line": 28,
+              "column": 7
+            },
+            {
+              "title": "Create announcement as draft and then delete",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Chromium",
+                  "projectName": "Chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 8013,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-02-06T18:05:14.486Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c5c4f3ebfbbd89b5f739-972f24fac03a0b67863a",
+              "file": "announcement.spec.ts",
+              "line": 33,
+              "column": 7
             },
             {
               "title": "Create announcement without description and verify error message",
@@ -224,12 +224,12 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 7666,
+                      "duration": 6511,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-02-06T13:10:11.232Z",
+                      "startTime": "2025-02-06T18:05:22.511Z",
                       "attachments": []
                     }
                   ],
@@ -238,11 +238,11 @@
               ],
               "id": "c5c4f3ebfbbd89b5f739-0ea08f6bd3ec7321fcf1",
               "file": "announcement.spec.ts",
-              "line": 51,
-              "column": 6
+              "line": 38,
+              "column": 7
             },
             {
-              "title": "create annoucement without title  and verify error message",
+              "title": "Create announcement without title and verify error message",
               "ok": true,
               "tags": [],
               "tests": [
@@ -256,25 +256,25 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 8428,
+                      "duration": 6051,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-02-06T13:10:18.909Z",
+                      "startTime": "2025-02-06T18:05:29.038Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "c5c4f3ebfbbd89b5f739-61d4616167fb3d701416",
+              "id": "c5c4f3ebfbbd89b5f739-833f883640c2036f0be7",
               "file": "announcement.spec.ts",
-              "line": 59,
-              "column": 6
+              "line": 45,
+              "column": 7
             },
             {
-              "title": "create announcement with acknowledgement",
+              "title": "Create announcement with acknowledgment",
               "ok": true,
               "tags": [],
               "tests": [
@@ -288,25 +288,25 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 10910,
+                      "duration": 9715,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-02-06T13:10:27.344Z",
+                      "startTime": "2025-02-06T18:05:35.099Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "c5c4f3ebfbbd89b5f739-0d33d3026eef702f8ba8",
+              "id": "c5c4f3ebfbbd89b5f739-07e642f2e01483c7aa84",
               "file": "announcement.spec.ts",
-              "line": 66,
-              "column": 6
+              "line": 52,
+              "column": 7
             },
             {
-              "title": "create annoucement from wall for organization",
+              "title": "Create announcement from wall for organization",
               "ok": true,
               "tags": [],
               "tests": [
@@ -320,22 +320,22 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 15676,
+                      "duration": 8403,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-02-06T13:10:38.271Z",
+                      "startTime": "2025-02-06T18:05:44.823Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "c5c4f3ebfbbd89b5f739-46217a7cfe1a33ba5492",
+              "id": "c5c4f3ebfbbd89b5f739-26b4095b04b66063a4b2",
               "file": "announcement.spec.ts",
-              "line": 70,
-              "column": 5
+              "line": 56,
+              "column": 7
             }
           ]
         }
@@ -344,8 +344,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-02-06T13:09:31.208Z",
-    "duration": 83124.248,
+    "startTime": "2025-02-06T18:04:48.156Z",
+    "duration": 65383.606999999996,
     "expected": 8,
     "skipped": 0,
     "unexpected": 0,
