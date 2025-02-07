@@ -96,12 +96,12 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 9301,
+                      "duration": 14745,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-02-06T18:04:48.827Z",
+                      "startTime": "2025-02-07T11:29:27.298Z",
                       "attachments": []
                     }
                   ],
@@ -128,12 +128,12 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 6841,
+                      "duration": 7792,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-02-06T18:04:58.304Z",
+                      "startTime": "2025-02-07T11:29:44.010Z",
                       "attachments": []
                     }
                   ],
@@ -160,12 +160,12 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 9324,
+                      "duration": 13386,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-02-06T18:05:05.152Z",
+                      "startTime": "2025-02-07T11:29:51.810Z",
                       "attachments": []
                     }
                   ],
@@ -192,12 +192,12 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 8013,
+                      "duration": 11514,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-02-06T18:05:14.486Z",
+                      "startTime": "2025-02-07T11:30:05.228Z",
                       "attachments": []
                     }
                   ],
@@ -224,12 +224,12 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 6511,
+                      "duration": 9171,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-02-06T18:05:22.511Z",
+                      "startTime": "2025-02-07T11:30:16.753Z",
                       "attachments": []
                     }
                   ],
@@ -256,12 +256,12 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 6051,
+                      "duration": 9163,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-02-06T18:05:29.038Z",
+                      "startTime": "2025-02-07T11:30:25.931Z",
                       "attachments": []
                     }
                   ],
@@ -288,12 +288,12 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 9715,
+                      "duration": 13791,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-02-06T18:05:35.099Z",
+                      "startTime": "2025-02-07T11:30:35.095Z",
                       "attachments": []
                     }
                   ],
@@ -320,12 +320,12 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 8403,
+                      "duration": 11775,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-02-06T18:05:44.823Z",
+                      "startTime": "2025-02-07T11:30:48.894Z",
                       "attachments": []
                     }
                   ],
@@ -336,6 +336,119 @@
               "file": "announcement.spec.ts",
               "line": 56,
               "column": 7
+            },
+            {
+              "title": "Create announcement with future date",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Chromium",
+                  "projectName": "Chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "failed",
+                      "duration": 9819,
+                      "error": {
+                        "message": "TypeError: this.selectFutureDate is not a function",
+                        "stack": "TypeError: this.selectFutureDate is not a function\n    at AnnouncementPage.createAnnouncementWithFutureDate (C:\\Users\\mohammed.feroz\\Desktop\\Engage-automation\\Keka-engage\\pages\\announcementPage.ts:113:16)\n    at C:\\Users\\mohammed.feroz\\Desktop\\Engage-automation\\Keka-engage\\tests\\announcement.spec.ts:61:5",
+                        "location": {
+                          "file": "C:\\Users\\mohammed.feroz\\Desktop\\Engage-automation\\Keka-engage\\pages\\announcementPage.ts",
+                          "column": 16,
+                          "line": 113
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\pages\\announcementPage.ts:113\n\n\u001b[0m \u001b[90m 111 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mclick(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mlocators\u001b[33m.\u001b[39mselectGroups)\u001b[33m;\u001b[39m\n \u001b[90m 112 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mclick(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mlocators\u001b[33m.\u001b[39mincludeAllEmployeesCheckbox)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 113 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mselectFutureDate()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 114 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mconfigureAndPublish()\u001b[33m;\u001b[39m\n \u001b[90m 115 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mverifyToastMessage(\u001b[32m\"Success!Announcement published successfully.\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 116 |\u001b[39m   }\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\mohammed.feroz\\Desktop\\Engage-automation\\Keka-engage\\pages\\announcementPage.ts",
+                            "column": 16,
+                            "line": 113
+                          },
+                          "message": "TypeError: this.selectFutureDate is not a function\n\n\u001b[90m   at \u001b[39m..\\pages\\announcementPage.ts:113\n\n\u001b[0m \u001b[90m 111 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mclick(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mlocators\u001b[33m.\u001b[39mselectGroups)\u001b[33m;\u001b[39m\n \u001b[90m 112 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mclick(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mlocators\u001b[33m.\u001b[39mincludeAllEmployeesCheckbox)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 113 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mselectFutureDate()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 114 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mconfigureAndPublish()\u001b[33m;\u001b[39m\n \u001b[90m 115 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mverifyToastMessage(\u001b[32m\"Success!Announcement published successfully.\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 116 |\u001b[39m   }\u001b[0m\n\u001b[2m    at AnnouncementPage.createAnnouncementWithFutureDate (C:\\Users\\mohammed.feroz\\Desktop\\Engage-automation\\Keka-engage\\pages\\announcementPage.ts:113:16)\u001b[22m\n\u001b[2m    at C:\\Users\\mohammed.feroz\\Desktop\\Engage-automation\\Keka-engage\\tests\\announcement.spec.ts:61:5\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-02-07T11:31:00.678Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\mohammed.feroz\\Desktop\\Engage-automation\\test-results\\announcement-Announcement--1bece-nouncement-with-future-date-Chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\mohammed.feroz\\Desktop\\Engage-automation\\test-results\\announcement-Announcement--1bece-nouncement-with-future-date-Chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\mohammed.feroz\\Desktop\\Engage-automation\\Keka-engage\\pages\\announcementPage.ts",
+                        "column": 16,
+                        "line": 113
+                      }
+                    },
+                    {
+                      "workerIndex": 1,
+                      "status": "failed",
+                      "duration": 11066,
+                      "error": {
+                        "message": "TypeError: this.selectFutureDate is not a function",
+                        "stack": "TypeError: this.selectFutureDate is not a function\n    at AnnouncementPage.createAnnouncementWithFutureDate (C:\\Users\\mohammed.feroz\\Desktop\\Engage-automation\\Keka-engage\\pages\\announcementPage.ts:113:16)\n    at C:\\Users\\mohammed.feroz\\Desktop\\Engage-automation\\Keka-engage\\tests\\announcement.spec.ts:61:5",
+                        "location": {
+                          "file": "C:\\Users\\mohammed.feroz\\Desktop\\Engage-automation\\Keka-engage\\pages\\announcementPage.ts",
+                          "column": 16,
+                          "line": 113
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\pages\\announcementPage.ts:113\n\n\u001b[0m \u001b[90m 111 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mclick(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mlocators\u001b[33m.\u001b[39mselectGroups)\u001b[33m;\u001b[39m\n \u001b[90m 112 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mclick(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mlocators\u001b[33m.\u001b[39mincludeAllEmployeesCheckbox)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 113 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mselectFutureDate()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 114 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mconfigureAndPublish()\u001b[33m;\u001b[39m\n \u001b[90m 115 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mverifyToastMessage(\u001b[32m\"Success!Announcement published successfully.\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 116 |\u001b[39m   }\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\mohammed.feroz\\Desktop\\Engage-automation\\Keka-engage\\pages\\announcementPage.ts",
+                            "column": 16,
+                            "line": 113
+                          },
+                          "message": "TypeError: this.selectFutureDate is not a function\n\n\u001b[90m   at \u001b[39m..\\pages\\announcementPage.ts:113\n\n\u001b[0m \u001b[90m 111 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mclick(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mlocators\u001b[33m.\u001b[39mselectGroups)\u001b[33m;\u001b[39m\n \u001b[90m 112 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mclick(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mlocators\u001b[33m.\u001b[39mincludeAllEmployeesCheckbox)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 113 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mselectFutureDate()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 114 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mconfigureAndPublish()\u001b[33m;\u001b[39m\n \u001b[90m 115 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mverifyToastMessage(\u001b[32m\"Success!Announcement published successfully.\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 116 |\u001b[39m   }\u001b[0m\n\u001b[2m    at AnnouncementPage.createAnnouncementWithFutureDate (C:\\Users\\mohammed.feroz\\Desktop\\Engage-automation\\Keka-engage\\pages\\announcementPage.ts:113:16)\u001b[22m\n\u001b[2m    at C:\\Users\\mohammed.feroz\\Desktop\\Engage-automation\\Keka-engage\\tests\\announcement.spec.ts:61:5\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2025-02-07T11:31:12.229Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\mohammed.feroz\\Desktop\\Engage-automation\\test-results\\announcement-Announcement--1bece-nouncement-with-future-date-Chromium-retry1\\test-failed-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\mohammed.feroz\\Desktop\\Engage-automation\\test-results\\announcement-Announcement--1bece-nouncement-with-future-date-Chromium-retry1\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\mohammed.feroz\\Desktop\\Engage-automation\\Keka-engage\\pages\\announcementPage.ts",
+                        "column": 16,
+                        "line": 113
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "c5c4f3ebfbbd89b5f739-834c31547c4a86076e53",
+              "file": "announcement.spec.ts",
+              "line": 60,
+              "column": 5
             }
           ]
         }
@@ -344,11 +457,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-02-06T18:04:48.156Z",
-    "duration": 65383.606999999996,
+    "startTime": "2025-02-07T11:29:26.300Z",
+    "duration": 117905.71800000001,
     "expected": 8,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 1,
     "flaky": 0
   }
 }
