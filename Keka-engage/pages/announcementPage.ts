@@ -110,7 +110,7 @@ export class AnnouncementPage extends BasePage {
     await this.page.click(this.locators.configurePublishBtn);
     await this.page.click(this.locators.selectGroups);
     await this.page.click(this.locators.includeAllEmployeesCheckbox);
-    await this.selectFutureDate();
+    await this.selectTodayDate();
     await this.configureAndPublish();
     await this.verifyToastMessage("Success!Announcement published successfully.");
   }
