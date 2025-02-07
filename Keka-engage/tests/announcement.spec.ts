@@ -57,4 +57,7 @@ test.describe('Announcement and Acknowledgment Tests', () => {
     await announcementPage.navigateToDashboard();
     await announcementPage.createAnnouncementFromWall(TEST_ANNOUNCEMENT.title, TEST_ANNOUNCEMENT.description);
   });
-});
+test ('Create announcement with future date', async () => {
+    await announcementPage.createAnnouncementWithFutureDate(TEST_ANNOUNCEMENT.title, TEST_ANNOUNCEMENT.description);
+  });
+ });
