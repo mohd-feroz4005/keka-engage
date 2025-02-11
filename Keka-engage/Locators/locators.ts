@@ -13,6 +13,7 @@ export const locators = {
   chooseEndDateField: '[formcontrolname="endDate"]',
   publishLater: "//label[@for='publishLater']",
   chooseStartDateField: '[formcontrolname="startDate"]',
+  chooseDateField: '[formcontrolname="endDate"]', master
   datePickerDay: 'text:has-text("3")',
   publishBtn: '//button[text()="Publish"]',
   draftBtn: '//button[text()="Save as Draft"]',
@@ -30,7 +31,4 @@ export const locators = {
   EngageAllpermissions : "//label[@for='Employee Communication Privileges']",
   manageAnnouncement : "//label[@for='Engage.ManageAnnouncements0']",
   updateBtnPermissions : "//button[text()='Update']",
-  
-
-
 };
