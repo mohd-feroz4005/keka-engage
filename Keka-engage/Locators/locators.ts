@@ -10,7 +10,9 @@ export const locators = {
   acknowledgeBtn: "//label[@for='acknowledgementToggle']",
   listAckBtn: '//*[@id="acknowledgeButton"]/button',
   includeAllEmployeesCheckbox: '//label[@for="includeAllEmployees"]',
-  chooseDateField: '[formcontrolname="endDate"]',
+  chooseEndDateField: '[formcontrolname="endDate"]',
+  publishLater: "//label[@for='publishLater']",
+  chooseStartDateField: '[formcontrolname="startDate"]',
   datePickerDay: 'text:has-text("3")',
   publishBtn: '//button[text()="Publish"]',
   draftBtn: '//button[text()="Save as Draft"]',
@@ -21,4 +23,14 @@ export const locators = {
   editLinkBtn: 'a.dropdown-item[href*="engage/announcements/edit"]',
   toastMessage: '//*[@id="toast-container"]',
   todayDateCell: "span.today-date-highlight",
+  settingsBtn: "//a[@title='Settings']",
+  rolesandpermissionbtn : "//a/label[contains(text(), 'Roles & Permissions')]",
+  hrManagerRole : "//p[contains(text(), 'HR Manager')]/ancestor::td//span[contains(@class, 'ki-edit')]",
+  featureEngage : "//label[text()='Engage']",
+  EngageAllpermissions : "//label[@for='Employee Communication Privileges']",
+  manageAnnouncement : "//label[@for='Engage.ManageAnnouncements0']",
+  updateBtnPermissions : "//button[text()='Update']",
+  
+
+
 };
