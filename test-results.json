@@ -78,11 +78,11 @@
         {
           "title": "Announcement and Acknowledgment Tests",
           "file": "announcement.spec.ts",
-          "line": 7,
+          "line": 8,
           "column": 6,
           "specs": [
             {
-              "title": "Create and publish a basic announcement",
+              "title": "Disable manage announcement permission for HR Manager",
               "ok": true,
               "tags": [],
               "tests": [
@@ -96,359 +96,22 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 14745,
+                      "duration": 8583,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-02-07T11:29:27.298Z",
+                      "startTime": "2025-02-11T09:00:03.596Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "c5c4f3ebfbbd89b5f739-3150538f56f85798102e",
+              "id": "c5c4f3ebfbbd89b5f739-b3bf42431ae8c4055dff",
               "file": "announcement.spec.ts",
-              "line": 20,
+              "line": 102,
               "column": 7
-            },
-            {
-              "title": "Create and save announcement as draft",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 60000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "Chromium",
-                  "projectName": "Chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "status": "passed",
-                      "duration": 7792,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-02-07T11:29:44.010Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "c5c4f3ebfbbd89b5f739-84650d7a9db5b777720d",
-              "file": "announcement.spec.ts",
-              "line": 24,
-              "column": 7
-            },
-            {
-              "title": "Update draft announcement and publish",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 60000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "Chromium",
-                  "projectName": "Chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "status": "passed",
-                      "duration": 13386,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-02-07T11:29:51.810Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "c5c4f3ebfbbd89b5f739-1db59228c64fa300120b",
-              "file": "announcement.spec.ts",
-              "line": 28,
-              "column": 7
-            },
-            {
-              "title": "Create announcement as draft and then delete",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 60000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "Chromium",
-                  "projectName": "Chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "status": "passed",
-                      "duration": 11514,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-02-07T11:30:05.228Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "c5c4f3ebfbbd89b5f739-972f24fac03a0b67863a",
-              "file": "announcement.spec.ts",
-              "line": 33,
-              "column": 7
-            },
-            {
-              "title": "Create announcement without description and verify error message",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 60000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "Chromium",
-                  "projectName": "Chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "status": "passed",
-                      "duration": 9171,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-02-07T11:30:16.753Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "c5c4f3ebfbbd89b5f739-0ea08f6bd3ec7321fcf1",
-              "file": "announcement.spec.ts",
-              "line": 38,
-              "column": 7
-            },
-            {
-              "title": "Create announcement without title and verify error message",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 60000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "Chromium",
-                  "projectName": "Chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "status": "passed",
-                      "duration": 9163,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-02-07T11:30:25.931Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "c5c4f3ebfbbd89b5f739-833f883640c2036f0be7",
-              "file": "announcement.spec.ts",
-              "line": 45,
-              "column": 7
-            },
-            {
-              "title": "Create announcement with acknowledgment",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 60000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "Chromium",
-                  "projectName": "Chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "status": "passed",
-                      "duration": 13791,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-02-07T11:30:35.095Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "c5c4f3ebfbbd89b5f739-07e642f2e01483c7aa84",
-              "file": "announcement.spec.ts",
-              "line": 52,
-              "column": 7
-            },
-            {
-              "title": "Create announcement from wall for organization",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 60000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "Chromium",
-                  "projectName": "Chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "status": "passed",
-                      "duration": 11775,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-02-07T11:30:48.894Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "c5c4f3ebfbbd89b5f739-26b4095b04b66063a4b2",
-              "file": "announcement.spec.ts",
-              "line": 56,
-              "column": 7
-            },
-            {
-              "title": "Create announcement with future date",
-              "ok": false,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 60000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "Chromium",
-                  "projectName": "Chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "status": "failed",
-                      "duration": 9819,
-                      "error": {
-                        "message": "TypeError: this.selectFutureDate is not a function",
-                        "stack": "TypeError: this.selectFutureDate is not a function\n    at AnnouncementPage.createAnnouncementWithFutureDate (C:\\Users\\mohammed.feroz\\Desktop\\Engage-automation\\Keka-engage\\pages\\announcementPage.ts:113:16)\n    at C:\\Users\\mohammed.feroz\\Desktop\\Engage-automation\\Keka-engage\\tests\\announcement.spec.ts:61:5",
-                        "location": {
-                          "file": "C:\\Users\\mohammed.feroz\\Desktop\\Engage-automation\\Keka-engage\\pages\\announcementPage.ts",
-                          "column": 16,
-                          "line": 113
-                        },
-                        "snippet": "\u001b[90m   at \u001b[39m..\\pages\\announcementPage.ts:113\n\n\u001b[0m \u001b[90m 111 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mclick(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mlocators\u001b[33m.\u001b[39mselectGroups)\u001b[33m;\u001b[39m\n \u001b[90m 112 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mclick(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mlocators\u001b[33m.\u001b[39mincludeAllEmployeesCheckbox)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 113 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mselectFutureDate()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 114 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mconfigureAndPublish()\u001b[33m;\u001b[39m\n \u001b[90m 115 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mverifyToastMessage(\u001b[32m\"Success!Announcement published successfully.\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 116 |\u001b[39m   }\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "C:\\Users\\mohammed.feroz\\Desktop\\Engage-automation\\Keka-engage\\pages\\announcementPage.ts",
-                            "column": 16,
-                            "line": 113
-                          },
-                          "message": "TypeError: this.selectFutureDate is not a function\n\n\u001b[90m   at \u001b[39m..\\pages\\announcementPage.ts:113\n\n\u001b[0m \u001b[90m 111 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mclick(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mlocators\u001b[33m.\u001b[39mselectGroups)\u001b[33m;\u001b[39m\n \u001b[90m 112 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mclick(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mlocators\u001b[33m.\u001b[39mincludeAllEmployeesCheckbox)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 113 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mselectFutureDate()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 114 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mconfigureAndPublish()\u001b[33m;\u001b[39m\n \u001b[90m 115 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mverifyToastMessage(\u001b[32m\"Success!Announcement published successfully.\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 116 |\u001b[39m   }\u001b[0m\n\u001b[2m    at AnnouncementPage.createAnnouncementWithFutureDate (C:\\Users\\mohammed.feroz\\Desktop\\Engage-automation\\Keka-engage\\pages\\announcementPage.ts:113:16)\u001b[22m\n\u001b[2m    at C:\\Users\\mohammed.feroz\\Desktop\\Engage-automation\\Keka-engage\\tests\\announcement.spec.ts:61:5\u001b[22m"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-02-07T11:31:00.678Z",
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "C:\\Users\\mohammed.feroz\\Desktop\\Engage-automation\\test-results\\announcement-Announcement--1bece-nouncement-with-future-date-Chromium\\test-failed-1.png"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "C:\\Users\\mohammed.feroz\\Desktop\\Engage-automation\\test-results\\announcement-Announcement--1bece-nouncement-with-future-date-Chromium\\trace.zip"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "C:\\Users\\mohammed.feroz\\Desktop\\Engage-automation\\Keka-engage\\pages\\announcementPage.ts",
-                        "column": 16,
-                        "line": 113
-                      }
-                    },
-                    {
-                      "workerIndex": 1,
-                      "status": "failed",
-                      "duration": 11066,
-                      "error": {
-                        "message": "TypeError: this.selectFutureDate is not a function",
-                        "stack": "TypeError: this.selectFutureDate is not a function\n    at AnnouncementPage.createAnnouncementWithFutureDate (C:\\Users\\mohammed.feroz\\Desktop\\Engage-automation\\Keka-engage\\pages\\announcementPage.ts:113:16)\n    at C:\\Users\\mohammed.feroz\\Desktop\\Engage-automation\\Keka-engage\\tests\\announcement.spec.ts:61:5",
-                        "location": {
-                          "file": "C:\\Users\\mohammed.feroz\\Desktop\\Engage-automation\\Keka-engage\\pages\\announcementPage.ts",
-                          "column": 16,
-                          "line": 113
-                        },
-                        "snippet": "\u001b[90m   at \u001b[39m..\\pages\\announcementPage.ts:113\n\n\u001b[0m \u001b[90m 111 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mclick(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mlocators\u001b[33m.\u001b[39mselectGroups)\u001b[33m;\u001b[39m\n \u001b[90m 112 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mclick(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mlocators\u001b[33m.\u001b[39mincludeAllEmployeesCheckbox)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 113 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mselectFutureDate()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 114 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mconfigureAndPublish()\u001b[33m;\u001b[39m\n \u001b[90m 115 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mverifyToastMessage(\u001b[32m\"Success!Announcement published successfully.\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 116 |\u001b[39m   }\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "C:\\Users\\mohammed.feroz\\Desktop\\Engage-automation\\Keka-engage\\pages\\announcementPage.ts",
-                            "column": 16,
-                            "line": 113
-                          },
-                          "message": "TypeError: this.selectFutureDate is not a function\n\n\u001b[90m   at \u001b[39m..\\pages\\announcementPage.ts:113\n\n\u001b[0m \u001b[90m 111 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mclick(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mlocators\u001b[33m.\u001b[39mselectGroups)\u001b[33m;\u001b[39m\n \u001b[90m 112 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mclick(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mlocators\u001b[33m.\u001b[39mincludeAllEmployeesCheckbox)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 113 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mselectFutureDate()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 114 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mconfigureAndPublish()\u001b[33m;\u001b[39m\n \u001b[90m 115 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mverifyToastMessage(\u001b[32m\"Success!Announcement published successfully.\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 116 |\u001b[39m   }\u001b[0m\n\u001b[2m    at AnnouncementPage.createAnnouncementWithFutureDate (C:\\Users\\mohammed.feroz\\Desktop\\Engage-automation\\Keka-engage\\pages\\announcementPage.ts:113:16)\u001b[22m\n\u001b[2m    at C:\\Users\\mohammed.feroz\\Desktop\\Engage-automation\\Keka-engage\\tests\\announcement.spec.ts:61:5\u001b[22m"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 1,
-                      "startTime": "2025-02-07T11:31:12.229Z",
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "C:\\Users\\mohammed.feroz\\Desktop\\Engage-automation\\test-results\\announcement-Announcement--1bece-nouncement-with-future-date-Chromium-retry1\\test-failed-1.png"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "C:\\Users\\mohammed.feroz\\Desktop\\Engage-automation\\test-results\\announcement-Announcement--1bece-nouncement-with-future-date-Chromium-retry1\\trace.zip"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "C:\\Users\\mohammed.feroz\\Desktop\\Engage-automation\\Keka-engage\\pages\\announcementPage.ts",
-                        "column": 16,
-                        "line": 113
-                      }
-                    }
-                  ],
-                  "status": "unexpected"
-                }
-              ],
-              "id": "c5c4f3ebfbbd89b5f739-834c31547c4a86076e53",
-              "file": "announcement.spec.ts",
-              "line": 60,
-              "column": 5
             }
           ]
         }
@@ -457,11 +120,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-02-07T11:29:26.300Z",
-    "duration": 117905.71800000001,
-    "expected": 8,
+    "startTime": "2025-02-11T09:00:03.061Z",
+    "duration": 9553.107,
+    "expected": 1,
     "skipped": 0,
-    "unexpected": 1,
+    "unexpected": 0,
     "flaky": 0
   }
 }
