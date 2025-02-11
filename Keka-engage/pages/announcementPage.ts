@@ -2,6 +2,7 @@
 import { BasePage } from "./basePage";
 import { expect } from "@playwright/test";
 import { locators } from "../Locators/locators";
+
 import { Anno_URL, Dashboard_URL, Deleted_toaster, Draft_toaster, Published_toaster, Role_updated } from "../config/constants";
 
 export class AnnouncementPage extends BasePage {
@@ -135,6 +136,9 @@ export class AnnouncementPage extends BasePage {
     await this.selectpublishDate();
     await this.page.click(this.locators.publishBtn);
     await this.verifyToastMessage(Published_toaster);
+    await this.selectFutureDate();
+    await this.configureAndPublish();
+    await this.verifyToastMessage("Success!Announcement published successfully.");
   }
 
   async acknowledgeAnnouncement() {
