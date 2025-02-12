@@ -12,7 +12,8 @@ import {
   Role_updated,
   Schedule_toaster,
 } from "../config/constants";
-import { TEST_ANNOUNCEMENT } from "../config/testData";
+import { TEST_ANNOUNCEMENT} from "../config/testData";
+
 
 export class AnnouncementPage extends BasePage {
   // Element Locators
@@ -161,7 +162,9 @@ export class AnnouncementPage extends BasePage {
     await this.selectpublishDate();
     await this.page.click(this.locators.publishBtn);
     await this.verifyToastMessage(Published_toaster);
-    
+    await this.selectFutureDate();
+    await this.configureAndPublish();
+    await this.verifyToastMessage("Success!Announcement published successfully.");
   }
 
   async acknowledgeAnnouncement() {

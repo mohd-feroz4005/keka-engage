@@ -37,3 +37,4 @@ export const locators = {
   uploadImage: "//button[text()='Upload image']",
 
 };
+
