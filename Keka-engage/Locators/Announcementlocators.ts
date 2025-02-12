@@ -13,6 +13,7 @@ export const locators = {
   chooseEndDateField: '[formcontrolname="endDate"]',
   publishLater: "//label[@for='publishLater']",
   chooseStartDateField: '[formcontrolname="startDate"]',
+  chooseDateField: '[formcontrolname="endDate"]', master
   datePickerDay: 'text:has-text("3")',
   publishBtn: '//button[text()="Publish"]',
   draftBtn: '//button[text()="Save as Draft"]',
@@ -25,6 +26,7 @@ export const locators = {
   toastMessage: '//*[@id="toast-container"]',
   todayDateCell: "span.today-date-highlight",
   settingsBtn: "//a[@title='Settings']",
+<<<<<<< HEAD:Keka-engage/Locators/Announcementlocators.ts
   rolesandpermissionbtn: "//a/label[contains(text(), 'Roles & Permissions')]",
   hrManagerRole:
     "//p[contains(text(), 'HR Manager')]/ancestor::td//span[contains(@class, 'ki-edit')]",
@@ -36,3 +38,12 @@ export const locators = {
   uploadImage: "//button[text()='Upload image']",
 
 };
+=======
+  rolesandpermissionbtn : "//a/label[contains(text(), 'Roles & Permissions')]",
+  hrManagerRole : "//p[contains(text(), 'HR Manager')]/ancestor::td//span[contains(@class, 'ki-edit')]",
+  featureEngage : "//label[text()='Engage']",
+  EngageAllpermissions : "//label[@for='Employee Communication Privileges']",
+  manageAnnouncement : "//label[@for='Engage.ManageAnnouncements0']",
+  updateBtnPermissions : "//button[text()='Update']",
+};
+>>>>>>> 2ab5a525a25f77e77856c77b7d46c033b8423e88:Keka-engage/Locators/locators.ts

@@ -1,6 +1,7 @@
 // src/pages/announcementPage.ts
 import { BasePage } from "./basePage";
 import { expect } from "@playwright/test";
+<<<<<<< HEAD
 import { locators } from "../Locators/Announcementlocators";
 import {
   Acknowledged_toaster,
@@ -14,6 +15,11 @@ import {
 } from "../config/constants";
 import test from "node:test";
 import { TEST_ANNOUNCEMENT } from "../config/testData";
+=======
+import { locators } from "../Locators/locators";
+
+import { Anno_URL, Dashboard_URL, Deleted_toaster, Draft_toaster, Published_toaster, Role_updated } from "../config/constants";
+>>>>>>> 2ab5a525a25f77e77856c77b7d46c033b8423e88
 
 export class AnnouncementPage extends BasePage {
   // Element Locators
@@ -162,6 +168,9 @@ export class AnnouncementPage extends BasePage {
     await this.selectpublishDate();
     await this.page.click(this.locators.publishBtn);
     await this.verifyToastMessage(Published_toaster);
+    await this.selectFutureDate();
+    await this.configureAndPublish();
+    await this.verifyToastMessage("Success!Announcement published successfully.");
   }
 
   async acknowledgeAnnouncement() {
