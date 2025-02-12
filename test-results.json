@@ -20,6 +20,10 @@
         null
       ],
       [
+        "dot",
+        null
+      ],
+      [
         "json",
         {
           "outputFile": "test-results.json"
@@ -30,12 +34,6 @@
         {
           "outputFolder": "playwright-report",
           "open": "always"
-        }
-      ],
-      [
-        "junit",
-        {
-          "outputFile": "results.xml"
         }
       ]
     ],
@@ -78,40 +76,54 @@
         {
           "title": "Announcement and Acknowledgment Tests",
           "file": "announcement.spec.ts",
-          "line": 8,
+          "line": 7,
           "column": 6,
-          "specs": [
+          "specs": [],
+          "suites": [
             {
-              "title": "Disable manage announcement permission for HR Manager",
-              "ok": true,
-              "tags": [],
-              "tests": [
+              "title": "Negative Test Cases",
+              "file": "announcement.spec.ts",
+              "line": 82,
+              "column": 8,
+              "specs": [
                 {
-                  "timeout": 60000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "Chromium",
-                  "projectName": "Chromium",
-                  "results": [
+                  "title": "Disable manage announcement permission for HR Manager",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
                     {
-                      "workerIndex": 0,
-                      "status": "passed",
-                      "duration": 8583,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-02-11T09:00:03.596Z",
-                      "attachments": []
+                      "timeout": 60000,
+                      "annotations": [
+                        {
+                          "type": "comment",
+                          "description": "Ensures that an HR Manager cannot manage announcements when the permission is disabled."
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "Chromium",
+                      "projectName": "Chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "status": "passed",
+                          "duration": 15701,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-02-12T07:41:13.987Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
                     }
                   ],
-                  "status": "expected"
+                  "id": "c5c4f3ebfbbd89b5f739-c37fe305a8839aaef17b",
+                  "file": "announcement.spec.ts",
+                  "line": 122,
+                  "column": 9
                 }
-              ],
-              "id": "c5c4f3ebfbbd89b5f739-b3bf42431ae8c4055dff",
-              "file": "announcement.spec.ts",
-              "line": 102,
-              "column": 7
+              ]
             }
           ]
         }
@@ -120,8 +132,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-02-11T09:00:03.061Z",
-    "duration": 9553.107,
+    "startTime": "2025-02-12T07:41:13.412Z",
+    "duration": 16713.056,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,

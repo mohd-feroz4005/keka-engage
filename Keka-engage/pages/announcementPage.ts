@@ -1,8 +1,19 @@
 // src/pages/announcementPage.ts
 import { BasePage } from "./basePage";
 import { expect } from "@playwright/test";
-import { locators } from "../Locators/locators";
-import { Anno_URL, Dashboard_URL, Deleted_toaster, Draft_toaster, Published_toaster, Role_updated } from "../config/constants";
+import { locators } from "../Locators/Announcementlocators";
+import {
+  Acknowledged_toaster,
+  Anno_URL,
+  Dashboard_URL,
+  Deleted_toaster,
+  Draft_toaster,
+  Published_toaster,
+  Role_updated,
+  Schedule_toaster,
+} from "../config/constants";
+import test from "node:test";
+import { TEST_ANNOUNCEMENT } from "../config/testData";
 
 export class AnnouncementPage extends BasePage {
   // Element Locators
@@ -26,6 +37,7 @@ export class AnnouncementPage extends BasePage {
     await this.page.click(this.locators.selectGroups);
     await this.page.click(this.locators.includeAllEmployeesCheckbox);
     await this.selectTodayDate();
+    //await this.page.frameLocator(this.locators.iframe).locator(this.locators.publishBtn).click();
     await this.page.click(this.locators.publishBtn);
     await this.verifyToastMessage(Published_toaster);
   }
@@ -39,18 +51,24 @@ export class AnnouncementPage extends BasePage {
 
   private async selectTodayDate() {
     await this.page.click(this.locators.chooseEndDateField);
-    await this.page.waitForSelector("bs-datepicker-container", { state: "visible" });
+    await this.page.waitForSelector("bs-datepicker-container", {
+      state: "visible",
+    });
     await this.page.locator(this.locators.todayDateCell).click();
   }
 
   private async selectpublishDate() {
     await this.page.click(this.locators.publishLater);
     await this.page.click(this.locators.chooseStartDateField);
-    await this.page.waitForSelector("bs-datepicker-container", { state: "visible" });
+    await this.page.waitForSelector("bs-datepicker-container", {
+      state: "visible",
+    });
     const tomorrow = new Date();
-    tomorrow.setDate(tomorrow.getDate() + 1);
+    tomorrow.setDate(tomorrow.getDate() + 3);
     const day = tomorrow.getDate();
-    await this.page.locator(`.bs-datepicker-container td:has-text("${day}")`).click();
+    await this.page
+      .locator('.bs-datepicker-container td:has-text("${day}")')
+      .click();
   }
 
   private async verifyToastMessage(expectedText: string) {
@@ -100,7 +118,10 @@ export class AnnouncementPage extends BasePage {
     await this.page.click(this.locators.configurePublishBtn);
   }
 
-  async createAnnouncementWithAcknowledgement(title: string, description: string) {
+  async createAnnouncementWithAcknowledgement(
+    title: string,
+    description: string
+  ) {
     await this.page.click(this.locators.newAnnouncementBtn);
     await this.fillAnnouncementDetails(title, description);
     await this.page.click(this.locators.acknowledgeBtn);
@@ -122,10 +143,16 @@ export class AnnouncementPage extends BasePage {
     await this.page.click(this.locators.configurePublishBtn);
     await this.page.click(this.locators.selectGroups);
     await this.page.click(this.locators.includeAllEmployeesCheckbox);
-    await this.selectTodayDate();
-    await this.configureAndPublish();
-    await this.verifyToastMessage(Published_toaster);
+    await this.page.click(this.locators.publishLater);
+    await this.page.click(this.locators.chooseEndDateField)
+    const futureDate = new Date();
+    futureDate.setDate(futureDate.getDate() + 3);
+    const futureDay = futureDate.getDate();
+    await this.page.locator(`.bs-datepicker-container td:has-text("${futureDay}")`).click();
+    await this.page.click(this.locators.publishBtn);
+    await this.verifyToastMessage(Schedule_toaster);
   }
+  
   async createAnnouncementwithpublishlater(title: string, description: string) {
     await this.page.click(this.locators.newAnnouncementBtn);
     await this.fillAnnouncementDetails(title, description);
@@ -139,23 +166,46 @@ export class AnnouncementPage extends BasePage {
 
   async acknowledgeAnnouncement() {
     await this.page.click(this.locators.listAckBtn);
-    await this.verifyToastMessage("Success!Announcement acknowledged successfully.");
+    await this.verifyToastMessage(Acknowledged_toaster);
   }
 
   async removeManageAnnouncementPermission() {
     await this.page.click(this.locators.settingsBtn);
     await this.page.click(this.locators.rolesandpermissionbtn);
-await this.page.click(this.locators.hrManagerRole);
-await this.page.click(this.locators.featureEngage);
-const isChecked = await this.page.isChecked(this.locators.manageAnnouncement);
-if (isChecked) {
-  await this.page.uncheck(this.locators.manageAnnouncement); // Uncheck if checked
-}
+    await this.page.click(this.locators.hrManagerRole);
+    await this.page.click(this.locators.featureEngage);
+    const isChecked = await this.page.isChecked(
+      this.locators.manageAnnouncement
+    );
+    if (isChecked) {
+      await this.page.uncheck(this.locators.manageAnnouncement); // Uncheck if checked
+    }
 
-// Proceed with update and navigate
-await this.page.click(this.locators.updateBtnPermissions);
-await this.navigateToAnnouncements();
-await this.verifyToastMessage(Role_updated);
+    // Proceed with update and navigate
+    await this.page.click(this.locators.updateBtnPermissions);
+    await this.navigateToAnnouncements();
+    await this.verifyToastMessage(Role_updated);
+  }
 
+  async CreateAnnoucementwithattachment() {
+    await this.page.click(this.locators.newAnnouncementBtn);
+    await this.fillAnnouncementDetails(TEST_ANNOUNCEMENT.title, TEST_ANNOUNCEMENT.description);
+    await this.page.click(this.locators.addAttachmentBtn);
+    
+    // Ensure the file input field is correctly targeted
+    const fileInput = this.page.locator(this.locators.addAttachmentBtn);
+    await fileInput.setInputFiles("C:\\Users\\mohammed.feroz\\Desktop\\images");
+    
+    await this.configureAndPublish();
+    
+  }
+  async CreateNoouncementwithuploadimage() {
+    await this.page.click(this.locators.newAnnouncementBtn);
+    await this.fillAnnouncementDetails(TEST_ANNOUNCEMENT.title, TEST_ANNOUNCEMENT.description);
+    await this.page.click(this.locators.uploadImage);
+    // Ensure the file input field is correctly targeted
+    const fileInput = this.page.locator(this.locators.uploadImage);
+    await fileInput.setInputFiles("C:\\Users\\mohammed.feroz\\Desktop\\images");
+    await this.configureAndPublish();
   }
 }
