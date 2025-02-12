@@ -1,3 +1,41 @@
+<<<<<<< HEAD
+<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="83.043392">
+<testsuite name="announcement.spec.ts" timestamp="2025-02-12T06:16:01.251Z" hostname="Chromium" tests="1" failures="1" skipped="0" time="79.809" errors="0">
+<testcase name="Announcement and Acknowledgment Tests › Create announcement as draft and then delete" classname="announcement.spec.ts" time="79.809">
+<failure message="announcement.spec.ts:36:7 Create announcement as draft and then delete" type="FAILURE">
+<![CDATA[  [Chromium] › announcement.spec.ts:36:7 › Announcement and Acknowledgment Tests › Create announcement as draft and then delete 
+
+    Test timeout of 60000ms exceeded.
+
+    Error: page.waitForTimeout: Test timeout of 60000ms exceeded.
+
+       at ..\pages\announcementPage.ts:102
+
+      100 |
+      101 |   async deleteAnnouncement() {
+    > 102 |     await this.page.waitForTimeout(5000);
+          |                     ^
+      103 |     await this.page.click(this.locators.updateEllipsis);
+      104 |     await this.page.click(this.locators.deleteAnnouncementBtn);
+      105 |     await this.page.click(this.locators.deleteConfirmBtn);
+        at AnnouncementPage.deleteAnnouncement (C:\Users\mohammed.feroz\Desktop\Engage-automation\Keka-engage\pages\announcementPage.ts:102:21)
+        at C:\Users\mohammed.feroz\Desktop\Engage-automation\Keka-engage\tests\announcement.spec.ts:38:28
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\announcement-Announcement--433fd-nt-as-draft-and-then-delete-Chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\announcement-Announcement--433fd-nt-as-draft-and-then-delete-Chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\announcement-Announcement--433fd-nt-as-draft-and-then-delete-Chromium\trace.zip
+=======
+
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="9.553107">
+<testsuite name="announcement.spec.ts" timestamp="2025-02-11T09:00:03.094Z" hostname="Chromium" tests="1" failures="0" skipped="0" time="8.583" errors="0">
+<testcase name="Announcement and Acknowledgment Tests › Disable manage announcement permission for HR Manager" classname="announcement.spec.ts" time="8.583">
+=======
 <testsuites id="" name="" tests="9" failures="1" skipped="0" errors="0" time="117.90571800000001">
 <testsuite name="announcement.spec.ts" timestamp="2025-02-07T11:29:26.530Z" hostname="Chromium" tests="9" failures="1" skipped="0" time="112.222" errors="0">
 <testcase name="Announcement and Acknowledgment Tests › Create and publish a basic announcement" classname="announcement.spec.ts" time="14.745">
@@ -43,11 +81,50 @@
     Usage:
 
         npx playwright show-trace test-results\announcement-Announcement--1bece-nouncement-with-future-date-Chromium\trace.zip
+>>>>>>> 2ab5a525a25f77e77856c77b7d46c033b8423e88
 
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
     Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
 
+<<<<<<< HEAD
+    Error: Timed out 5000ms waiting for expect(locator).toHaveText(expected)
+
+    Locator: locator('//*[@id="toast-container"]')
+    Expected string: "Success!Announcement deleted successfully."
+    Received string: "Success!!Announcement deleted successfully.Success!!Announcement saved successfully."
+    Call log:
+      - expect.toHaveText with timeout 5000ms
+      - waiting for locator('//*[@id="toast-container"]')
+        2 × locator resolved to <div id="toast-container" class="toast-top-right toast-container">…</div>
+          - unexpected value "Success!!Announcement saved successfully."
+        7 × locator resolved to <div id="toast-container" class="toast-top-right toast-container">…</div>
+          - unexpected value "Success!!Announcement deleted successfully.Success!!Announcement saved successfully."
+
+
+       at ..\pages\announcementPage.ts:77
+
+      75 |     const toast = this.page.locator(this.locators.toastMessage);
+      76 |     await expect(toast).toBeVisible();
+    > 77 |     await expect(toast).toHaveText(expectedText);
+         |                         ^
+      78 |   }
+      79 |
+      80 |   async createBasicAnnouncement(title: string, description: string) {
+        at AnnouncementPage.verifyToastMessage (C:\Users\mohammed.feroz\Desktop\Engage-automation\Keka-engage\pages\announcementPage.ts:77:25)
+        at AnnouncementPage.deleteAnnouncement (C:\Users\mohammed.feroz\Desktop\Engage-automation\Keka-engage\pages\announcementPage.ts:106:5)
+        at C:\Users\mohammed.feroz\Desktop\Engage-automation\Keka-engage\tests\announcement.spec.ts:38:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\announcement-Announcement--433fd-nt-as-draft-and-then-delete-Chromium-retry1\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\announcement-Announcement--433fd-nt-as-draft-and-then-delete-Chromium-retry1\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\announcement-Announcement--433fd-nt-as-draft-and-then-delete-Chromium-retry1\trace.zip
+=======
     TypeError: this.selectFutureDate is not a function
 
        at ..\pages\announcementPage.ts:113
@@ -71,12 +148,22 @@
     Usage:
 
         npx playwright show-trace test-results\announcement-Announcement--1bece-nouncement-with-future-date-Chromium-retry1\trace.zip
+>>>>>>> 2ab5a525a25f77e77856c77b7d46c033b8423e88
 
     ────────────────────────────────────────────────────────────────────────────────────────────────
 ]]>
 </failure>
 <system-out>
 <![CDATA[
+<<<<<<< HEAD
+[[ATTACHMENT|test-results\announcement-Announcement--433fd-nt-as-draft-and-then-delete-Chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\announcement-Announcement--433fd-nt-as-draft-and-then-delete-Chromium\trace.zip]]
+
+[[ATTACHMENT|test-results\announcement-Announcement--433fd-nt-as-draft-and-then-delete-Chromium-retry1\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\announcement-Announcement--433fd-nt-as-draft-and-then-delete-Chromium-retry1\trace.zip]]
+=======
 [[ATTACHMENT|test-results\announcement-Announcement--1bece-nouncement-with-future-date-Chromium\test-failed-1.png]]
 
 [[ATTACHMENT|test-results\announcement-Announcement--1bece-nouncement-with-future-date-Chromium\trace.zip]]
@@ -84,6 +171,7 @@
 [[ATTACHMENT|test-results\announcement-Announcement--1bece-nouncement-with-future-date-Chromium-retry1\test-failed-1.png]]
 
 [[ATTACHMENT|test-results\announcement-Announcement--1bece-nouncement-with-future-date-Chromium-retry1\trace.zip]]
+>>>>>>> 2ab5a525a25f77e77856c77b7d46c033b8423e88
 ]]>
 </system-out>
 </testcase>
