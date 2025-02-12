@@ -1,5 +1,5 @@
 // src/pages/basePage.ts
-import { expect, Page } from '@playwright/test';
+import { expect, Page } from "@playwright/test";
 
 export class BasePage {
   readonly page: Page;
@@ -9,10 +9,10 @@ export class BasePage {
   }
 
   async waitForNetworkIdle() {
-    await this.page.waitForLoadState('networkidle');
+    await this.page.waitForLoadState("networkidle");
   }
 
   async verifyUrlContains(text: string) {
-    await expect(this.page).toHaveURL(new RegExp(text, 'i'));
+    await expect(this.page).toHaveURL(new RegExp(text, "i"));
   }
 }
