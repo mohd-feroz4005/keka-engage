@@ -2,6 +2,7 @@
 import { BasePage } from './basePage';
 import { expect } from '@playwright/test';
 import { Anno_URL, BASE_URL, CREDENTIALS } from '../config/constants';
+import { loginLocators } from '../Locators/Loginlocators';
 
 export class KekaLoginPage extends BasePage {
   private readonly usernameField = 'input[name="UserName"]';

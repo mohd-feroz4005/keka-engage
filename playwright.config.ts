@@ -16,10 +16,13 @@ const config: PlaywrightTestConfig = {
     // { name: 'WebKit', use: { browserName: 'webkit' } }
   ],
   reporter: [
-    ['list'],  // Shows results in console
+    ['list'],  // Good for console readability
+    ['dot'],  // Shows progress with dots (useful for large test suites)
     ['json', { outputFile: 'test-results.json' }], // JSON report
+    //['allure-playwright', { outputFolder: 'playwright-report', open: 'always'}], // Allure report
     ['html', { outputFolder: 'playwright-report', open: 'always' }], // HTML report
-    ['junit', { outputFile: 'results.xml' }] // JUnit report (for CI/CD)
+  
+    //['junit', { outputFile: 'results.xml' }] // JUnit report (for CI/CD)
   ]
 };
 

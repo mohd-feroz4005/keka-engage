@@ -20,6 +20,10 @@
         null
       ],
       [
+        "dot",
+        null
+      ],
+      [
         "json",
         {
           "outputFile": "test-results.json"
@@ -30,12 +34,6 @@
         {
           "outputFolder": "playwright-report",
           "open": "always"
-        }
-      ],
-      [
-        "junit",
-        {
-          "outputFile": "results.xml"
         }
       ]
     ],
@@ -80,36 +78,73 @@
           "file": "announcement.spec.ts",
           "line": 7,
           "column": 6,
-          "specs": [
+          "specs": [],
+          "suites": [
             {
-              "title": "Create and publish a basic announcement",
-              "ok": true,
-              "tags": [],
-              "tests": [
+              "title": "Negative Test Cases",
+              "file": "announcement.spec.ts",
+              "line": 82,
+              "column": 8,
+              "specs": [
                 {
-                  "timeout": 60000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "Chromium",
-                  "projectName": "Chromium",
-                  "results": [
+                  "title": "Disable manage announcement permission for HR Manager",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
                     {
+<<<<<<< HEAD
+                      "timeout": 60000,
+                      "annotations": [
+                        {
+                          "type": "comment",
+                          "description": "Ensures that an HR Manager cannot manage announcements when the permission is disabled."
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "Chromium",
+                      "projectName": "Chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "status": "passed",
+                          "duration": 15701,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-02-12T07:41:13.987Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+=======
                       "workerIndex": 0,
                       "status": "passed",
+                      "duration": 8583,
                       "duration": 14745,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
+                      "startTime": "2025-02-11T09:00:03.596Z",
                       "startTime": "2025-02-07T11:29:27.298Z",
                       "attachments": []
+>>>>>>> 2ab5a525a25f77e77856c77b7d46c033b8423e88
                     }
                   ],
-                  "status": "expected"
+                  "id": "c5c4f3ebfbbd89b5f739-c37fe305a8839aaef17b",
+                  "file": "announcement.spec.ts",
+                  "line": 122,
+                  "column": 9
                 }
+<<<<<<< HEAD
+              ]
+=======
               ],
-              "id": "c5c4f3ebfbbd89b5f739-3150538f56f85798102e",
+              "id": "c5c4f3ebfbbd89b5f739-b3bf42431ae8c4055dff",
               "file": "announcement.spec.ts",
+              "line": 102,
+
               "line": 20,
               "column": 7
             },
@@ -449,6 +484,7 @@
               "file": "announcement.spec.ts",
               "line": 60,
               "column": 5
+>>>>>>> 2ab5a525a25f77e77856c77b7d46c033b8423e88
             }
           ]
         }
@@ -457,9 +493,12 @@
   ],
   "errors": [],
   "stats": {
+    "startTime": "2025-02-12T07:41:13.412Z",
+    "duration": 16713.056,
+    "expected": 1,
     "startTime": "2025-02-07T11:29:26.300Z",
     "duration": 117905.71800000001,
-    "expected": 8,
+    "expected": 8, master
     "skipped": 0,
     "unexpected": 1,
     "flaky": 0
