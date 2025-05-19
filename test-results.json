@@ -1,7 +1,7 @@
 {
   "config": {
-    "configFile": "C:\\Users\\mohammed.feroz\\Engage-automation\\playwright.config.ts",
-    "rootDir": "C:/Users/mohammed.feroz/Engage-automation/Keka-engage/tests",
+    "configFile": "C:\\keka-engage\\playwright.config.ts",
+    "rootDir": "C:/keka-engage/Keka-engage/tests",
     "forbidOnly": false,
     "fullyParallel": false,
     "globalSetup": null,
@@ -44,13 +44,13 @@
     "quiet": false,
     "projects": [
       {
-        "outputDir": "C:/Users/mohammed.feroz/Engage-automation/test-results",
+        "outputDir": "C:/keka-engage/test-results",
         "repeatEach": 1,
         "retries": 1,
         "metadata": {},
         "id": "Chromium",
         "name": "Chromium",
-        "testDir": "C:/Users/mohammed.feroz/Engage-automation/Keka-engage/tests",
+        "testDir": "C:/keka-engage/Keka-engage/tests",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -105,52 +105,75 @@
                       "results": [
                         {
                           "workerIndex": 0,
-                          "status": "interrupted",
-                          "duration": 31627,
+                          "status": "failed",
+                          "duration": 22189,
                           "error": {
-                            "message": "Error: page.click: Test ended.\nCall log:\n\u001b[2m  - waiting for locator('button:has-text(\"New Announcement\")')\u001b[22m\n\u001b[2m    - waiting for\" https://login.kekastage.com/connect/authorize?response_type=code&client_id=4f38a133-aa49-4536-b73c-014d09493201&state=OXpCRERndXo0eWVOQXFXV2UuRFZ5SmZTR0sxUFYtZjBlSExFZVRzUGRJeDd5%3B%2523%252Fengage%2…\" navigation to finish...\u001b[22m\n\u001b[2m    - navigated to \"https://aarthi.kekastage.com/?code=3C7FC50E3FEE926ADE6D51C54866D03121CB316FD685261C30E71212C75624ED-1&scope=openid%20offline_access%20kekahr.api%20hiro.api&state=OXpCRERndXo0eWVOQXFXV2UuRFZ5SmZTR0sxU…\"\u001b[22m\n",
-                            "stack": "Error: page.click: Test ended.\nCall log:\n\u001b[2m  - waiting for locator('button:has-text(\"New Announcement\")')\u001b[22m\n\u001b[2m    - waiting for\" https://login.kekastage.com/connect/authorize?response_type=code&client_id=4f38a133-aa49-4536-b73c-014d09493201&state=OXpCRERndXo0eWVOQXFXV2UuRFZ5SmZTR0sxUFYtZjBlSExFZVRzUGRJeDd5%3B%2523%252Fengage%2…\" navigation to finish...\u001b[22m\n\u001b[2m    - navigated to \"https://aarthi.kekastage.com/?code=3C7FC50E3FEE926ADE6D51C54866D03121CB316FD685261C30E71212C75624ED-1&scope=openid%20offline_access%20kekahr.api%20hiro.api&state=OXpCRERndXo0eWVOQXFXV2UuRFZ5SmZTR0sxU…\"\u001b[22m\n\n    at AnnouncementPage.createBasicAnnouncement (C:\\Users\\mohammed.feroz\\Engage-automation\\Keka-engage\\pages\\announcementPage.ts:92:21)\n    at C:\\Users\\mohammed.feroz\\Engage-automation\\Keka-engage\\tests\\announcement.spec.ts:24:30",
-                            "location": {
-                              "file": "C:\\Users\\mohammed.feroz\\Engage-automation\\Keka-engage\\pages\\announcementPage.ts",
-                              "column": 21,
-                              "line": 92
+                            "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('//*[@id=\"toast-container\"]')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//*[@id=\"toast-container\"]')\u001b[22m\n",
+                            "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('//*[@id=\"toast-container\"]')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//*[@id=\"toast-container\"]')\u001b[22m\n\n    at AnnouncementPage.verifyToastMessage (C:\\keka-engage\\Keka-engage\\pages\\announcementPage.ts:87:25)\n    at AnnouncementPage.configureAndPublish (C:\\keka-engage\\Keka-engage\\pages\\announcementPage.ts:42:16)\n    at AnnouncementPage.createBasicAnnouncement (C:\\keka-engage\\Keka-engage\\pages\\announcementPage.ts:94:5)\n    at C:\\keka-engage\\Keka-engage\\tests\\announcement.spec.ts:24:7",
+                            "matcherResult": {
+                              "message": "\u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('//*[@id=\"toast-container\"]')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//*[@id=\"toast-container\"]')\u001b[22m\n",
+                              "pass": false,
+                              "actual": "<element(s) not found>",
+                              "name": "toBeVisible",
+                              "expected": "visible",
+                              "log": [
+                                "  - expect.toBeVisible with timeout 5000ms",
+                                "  - waiting for locator('//*[@id=\"toast-container\"]')"
+                              ],
+                              "timeout": 5000
                             },
-                            "snippet": "\u001b[90m   at \u001b[39m..\\pages\\announcementPage.ts:92\n\n\u001b[0m \u001b[90m 90 |\u001b[39m\n \u001b[90m 91 |\u001b[39m   \u001b[36masync\u001b[39m createBasicAnnouncement(title\u001b[33m:\u001b[39m string\u001b[33m,\u001b[39m description\u001b[33m:\u001b[39m string) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 92 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mclick(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mlocators\u001b[33m.\u001b[39mnewAnnouncementBtn)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 93 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mfillAnnouncementDetails(title\u001b[33m,\u001b[39m description)\u001b[33m;\u001b[39m\n \u001b[90m 94 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mconfigureAndPublish()\u001b[33m;\u001b[39m\n \u001b[90m 95 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mwaitForNetworkIdle()\u001b[33m;\u001b[39m\u001b[0m"
+                            "location": {
+                              "file": "C:\\keka-engage\\Keka-engage\\pages\\announcementPage.ts",
+                              "column": 25,
+                              "line": 87
+                            },
+                            "snippet": "\u001b[90m   at \u001b[39m..\\pages\\announcementPage.ts:87\n\n\u001b[0m \u001b[90m 85 |\u001b[39m   \u001b[36mprivate\u001b[39m \u001b[36masync\u001b[39m verifyToastMessage(expectedText\u001b[33m:\u001b[39m string) {\n \u001b[90m 86 |\u001b[39m     \u001b[36mconst\u001b[39m toast \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mlocators\u001b[33m.\u001b[39mtoastMessage)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 87 |\u001b[39m     \u001b[36mawait\u001b[39m expect(toast)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 88 |\u001b[39m     \u001b[36mawait\u001b[39m expect(toast)\u001b[33m.\u001b[39mtoHaveText(expectedText)\u001b[33m;\u001b[39m\n \u001b[90m 89 |\u001b[39m   }\n \u001b[90m 90 |\u001b[39m\u001b[0m"
                           },
                           "errors": [
                             {
                               "location": {
-                                "file": "C:\\Users\\mohammed.feroz\\Engage-automation\\Keka-engage\\pages\\announcementPage.ts",
-                                "column": 21,
-                                "line": 92
+                                "file": "C:\\keka-engage\\Keka-engage\\pages\\announcementPage.ts",
+                                "column": 25,
+                                "line": 87
                               },
-                              "message": "Error: page.click: Test ended.\nCall log:\n\u001b[2m  - waiting for locator('button:has-text(\"New Announcement\")')\u001b[22m\n\u001b[2m    - waiting for\" https://login.kekastage.com/connect/authorize?response_type=code&client_id=4f38a133-aa49-4536-b73c-014d09493201&state=OXpCRERndXo0eWVOQXFXV2UuRFZ5SmZTR0sxUFYtZjBlSExFZVRzUGRJeDd5%3B%2523%252Fengage%2…\" navigation to finish...\u001b[22m\n\u001b[2m    - navigated to \"https://aarthi.kekastage.com/?code=3C7FC50E3FEE926ADE6D51C54866D03121CB316FD685261C30E71212C75624ED-1&scope=openid%20offline_access%20kekahr.api%20hiro.api&state=OXpCRERndXo0eWVOQXFXV2UuRFZ5SmZTR0sxU…\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\pages\\announcementPage.ts:92\n\n\u001b[0m \u001b[90m 90 |\u001b[39m\n \u001b[90m 91 |\u001b[39m   \u001b[36masync\u001b[39m createBasicAnnouncement(title\u001b[33m:\u001b[39m string\u001b[33m,\u001b[39m description\u001b[33m:\u001b[39m string) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 92 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mclick(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mlocators\u001b[33m.\u001b[39mnewAnnouncementBtn)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 93 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mfillAnnouncementDetails(title\u001b[33m,\u001b[39m description)\u001b[33m;\u001b[39m\n \u001b[90m 94 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mconfigureAndPublish()\u001b[33m;\u001b[39m\n \u001b[90m 95 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mwaitForNetworkIdle()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at AnnouncementPage.createBasicAnnouncement (C:\\Users\\mohammed.feroz\\Engage-automation\\Keka-engage\\pages\\announcementPage.ts:92:21)\u001b[22m\n\u001b[2m    at C:\\Users\\mohammed.feroz\\Engage-automation\\Keka-engage\\tests\\announcement.spec.ts:24:30\u001b[22m"
+                              "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('//*[@id=\"toast-container\"]')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//*[@id=\"toast-container\"]')\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\pages\\announcementPage.ts:87\n\n\u001b[0m \u001b[90m 85 |\u001b[39m   \u001b[36mprivate\u001b[39m \u001b[36masync\u001b[39m verifyToastMessage(expectedText\u001b[33m:\u001b[39m string) {\n \u001b[90m 86 |\u001b[39m     \u001b[36mconst\u001b[39m toast \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mlocators\u001b[33m.\u001b[39mtoastMessage)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 87 |\u001b[39m     \u001b[36mawait\u001b[39m expect(toast)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 88 |\u001b[39m     \u001b[36mawait\u001b[39m expect(toast)\u001b[33m.\u001b[39mtoHaveText(expectedText)\u001b[33m;\u001b[39m\n \u001b[90m 89 |\u001b[39m   }\n \u001b[90m 90 |\u001b[39m\u001b[0m\n\u001b[2m    at AnnouncementPage.verifyToastMessage (C:\\keka-engage\\Keka-engage\\pages\\announcementPage.ts:87:25)\u001b[22m\n\u001b[2m    at AnnouncementPage.configureAndPublish (C:\\keka-engage\\Keka-engage\\pages\\announcementPage.ts:42:16)\u001b[22m\n\u001b[2m    at AnnouncementPage.createBasicAnnouncement (C:\\keka-engage\\Keka-engage\\pages\\announcementPage.ts:94:5)\u001b[22m\n\u001b[2m    at C:\\keka-engage\\Keka-engage\\tests\\announcement.spec.ts:24:7\u001b[22m"
                             }
                           ],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2025-05-19T10:13:14.050Z",
+                          "startTime": "2025-05-19T12:32:18.016Z",
                           "attachments": [
                             {
                               "name": "screenshot",
                               "contentType": "image/png",
-                              "path": "C:\\Users\\mohammed.feroz\\Engage-automation\\test-results\\announcement-Keka-Engage-A-6571f-ublish-a-basic-announcement-Chromium\\test-failed-1.png"
+                              "path": "C:\\keka-engage\\test-results\\announcement-Keka-Engage-A-6571f-ublish-a-basic-announcement-Chromium\\test-failed-1.png"
                             },
                             {
                               "name": "trace",
                               "contentType": "application/zip",
-                              "path": "C:\\Users\\mohammed.feroz\\Engage-automation\\test-results\\announcement-Keka-Engage-A-6571f-ublish-a-basic-announcement-Chromium\\trace.zip"
+                              "path": "C:\\keka-engage\\test-results\\announcement-Keka-Engage-A-6571f-ublish-a-basic-announcement-Chromium\\trace.zip"
                             }
                           ],
                           "errorLocation": {
-                            "file": "C:\\Users\\mohammed.feroz\\Engage-automation\\Keka-engage\\pages\\announcementPage.ts",
-                            "column": 21,
-                            "line": 92
+                            "file": "C:\\keka-engage\\Keka-engage\\pages\\announcementPage.ts",
+                            "column": 25,
+                            "line": 87
                           }
+                        },
+                        {
+                          "workerIndex": 1,
+                          "status": "passed",
+                          "duration": 13701,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 1,
+                          "startTime": "2025-05-19T12:32:43.697Z",
+                          "attachments": []
                         }
                       ],
-                      "status": "skipped"
+                      "status": "flaky"
                     }
                   ],
                   "id": "c5c4f3ebfbbd89b5f739-4bc96a5237e9078403fa",
@@ -165,12 +188,29 @@
                   "tests": [
                     {
                       "timeout": 60000,
-                      "annotations": [],
+                      "annotations": [
+                        {
+                          "type": "comment",
+                          "description": "Verifies that an announcement can be saved as a draft."
+                        }
+                      ],
                       "expectedStatus": "passed",
                       "projectId": "Chromium",
                       "projectName": "Chromium",
-                      "results": [],
-                      "status": "skipped"
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "status": "passed",
+                          "duration": 10087,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-19T12:32:57.861Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
                     }
                   ],
                   "id": "c5c4f3ebfbbd89b5f739-0d373c14231651a9e800",
@@ -185,12 +225,29 @@
                   "tests": [
                     {
                       "timeout": 60000,
-                      "annotations": [],
+                      "annotations": [
+                        {
+                          "type": "comment",
+                          "description": "Verifies that a draft announcement can be updated and published."
+                        }
+                      ],
                       "expectedStatus": "passed",
                       "projectId": "Chromium",
                       "projectName": "Chromium",
-                      "results": [],
-                      "status": "skipped"
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "status": "passed",
+                          "duration": 16461,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-19T12:33:07.962Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
                     }
                   ],
                   "id": "c5c4f3ebfbbd89b5f739-a2a550eaceee438df9fb",
@@ -205,12 +262,29 @@
                   "tests": [
                     {
                       "timeout": 60000,
-                      "annotations": [],
+                      "annotations": [
+                        {
+                          "type": "comment",
+                          "description": "Verifies that an announcement can be created with acknowledgment required."
+                        }
+                      ],
                       "expectedStatus": "passed",
                       "projectId": "Chromium",
                       "projectName": "Chromium",
-                      "results": [],
-                      "status": "skipped"
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "status": "passed",
+                          "duration": 16956,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-19T12:33:24.434Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
                     }
                   ],
                   "id": "c5c4f3ebfbbd89b5f739-9ea306a09305bf919df9",
@@ -225,12 +299,29 @@
                   "tests": [
                     {
                       "timeout": 60000,
-                      "annotations": [],
+                      "annotations": [
+                        {
+                          "type": "comment",
+                          "description": "Verifies that an announcement can be created from the company wall."
+                        }
+                      ],
                       "expectedStatus": "passed",
                       "projectId": "Chromium",
                       "projectName": "Chromium",
-                      "results": [],
-                      "status": "skipped"
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "status": "passed",
+                          "duration": 14152,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-19T12:33:41.405Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
                     }
                   ],
                   "id": "c5c4f3ebfbbd89b5f739-29c12cb8e3a2f6552d69",
@@ -245,12 +336,29 @@
                   "tests": [
                     {
                       "timeout": 60000,
-                      "annotations": [],
+                      "annotations": [
+                        {
+                          "type": "comment",
+                          "description": "Verifies that an announcement can be scheduled for a future date."
+                        }
+                      ],
                       "expectedStatus": "passed",
                       "projectId": "Chromium",
                       "projectName": "Chromium",
-                      "results": [],
-                      "status": "skipped"
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "status": "passed",
+                          "duration": 15403,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-19T12:33:55.689Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
                     }
                   ],
                   "id": "c5c4f3ebfbbd89b5f739-b9532b638621a7c87033",
@@ -265,12 +373,29 @@
                   "tests": [
                     {
                       "timeout": 60000,
-                      "annotations": [],
+                      "annotations": [
+                        {
+                          "type": "comment",
+                          "description": "Verifies that an announcement can be scheduled to publish later."
+                        }
+                      ],
                       "expectedStatus": "passed",
                       "projectId": "Chromium",
                       "projectName": "Chromium",
-                      "results": [],
-                      "status": "skipped"
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "status": "passed",
+                          "duration": 13770,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-19T12:34:11.115Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
                     }
                   ],
                   "id": "c5c4f3ebfbbd89b5f739-04846b780ec77af48bc1",
@@ -285,37 +410,34 @@
                   "tests": [
                     {
                       "timeout": 60000,
-                      "annotations": [],
+                      "annotations": [
+                        {
+                          "type": "comment",
+                          "description": "Verifies that an announcement can be created with a pixel image."
+                        }
+                      ],
                       "expectedStatus": "passed",
                       "projectId": "Chromium",
                       "projectName": "Chromium",
-                      "results": [],
-                      "status": "skipped"
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "status": "passed",
+                          "duration": 23934,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-19T12:34:25.020Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
                     }
                   ],
                   "id": "c5c4f3ebfbbd89b5f739-3d1071597b32aa23439e",
                   "file": "announcement.spec.ts",
                   "line": 65,
-                  "column": 9
-                },
-                {
-                  "title": "Create announcement from wall or dashboard",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 60000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "Chromium",
-                      "projectName": "Chromium",
-                      "results": [],
-                      "status": "skipped"
-                    }
-                  ],
-                  "id": "c5c4f3ebfbbd89b5f739-a2044c195f9b793c0195",
-                  "file": "announcement.spec.ts",
-                  "line": 71,
                   "column": 9
                 },
                 {
@@ -325,17 +447,34 @@
                   "tests": [
                     {
                       "timeout": 60000,
-                      "annotations": [],
+                      "annotations": [
+                        {
+                          "type": "comment",
+                          "description": "Ensures that a published announcement appears on the dashboard."
+                        }
+                      ],
                       "expectedStatus": "passed",
                       "projectId": "Chromium",
                       "projectName": "Chromium",
-                      "results": [],
-                      "status": "skipped"
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "status": "passed",
+                          "duration": 12712,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-19T12:34:49.543Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
                     }
                   ],
                   "id": "c5c4f3ebfbbd89b5f739-a390a8ebcd9bdced7787",
                   "file": "announcement.spec.ts",
-                  "line": 77,
+                  "line": 72,
                   "column": 9
                 }
               ]
@@ -343,7 +482,7 @@
             {
               "title": "Negative Test Cases",
               "file": "announcement.spec.ts",
-              "line": 88,
+              "line": 83,
               "column": 8,
               "specs": [
                 {
@@ -353,17 +492,34 @@
                   "tests": [
                     {
                       "timeout": 60000,
-                      "annotations": [],
+                      "annotations": [
+                        {
+                          "type": "comment",
+                          "description": "Verifies that an error message is displayed when creating an announcement without a description."
+                        }
+                      ],
                       "expectedStatus": "passed",
                       "projectId": "Chromium",
                       "projectName": "Chromium",
-                      "results": [],
-                      "status": "skipped"
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "status": "passed",
+                          "duration": 8616,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-19T12:35:02.311Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
                     }
                   ],
                   "id": "c5c4f3ebfbbd89b5f739-1969f1ec7ee3e6303bf1",
                   "file": "announcement.spec.ts",
-                  "line": 89,
+                  "line": 84,
                   "column": 9
                 },
                 {
@@ -373,17 +529,34 @@
                   "tests": [
                     {
                       "timeout": 60000,
-                      "annotations": [],
+                      "annotations": [
+                        {
+                          "type": "comment",
+                          "description": "Verifies that an error message is displayed when creating an announcement without a title."
+                        }
+                      ],
                       "expectedStatus": "passed",
                       "projectId": "Chromium",
                       "projectName": "Chromium",
-                      "results": [],
-                      "status": "skipped"
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "status": "passed",
+                          "duration": 9375,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-19T12:35:10.942Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
                     }
                   ],
                   "id": "c5c4f3ebfbbd89b5f739-872867de39f838bd8c2c",
                   "file": "announcement.spec.ts",
-                  "line": 95,
+                  "line": 90,
                   "column": 9
                 },
                 {
@@ -393,37 +566,136 @@
                   "tests": [
                     {
                       "timeout": 60000,
-                      "annotations": [],
+                      "annotations": [
+                        {
+                          "type": "comment",
+                          "description": "Verifies the system's handling of special characters in the announcement title."
+                        }
+                      ],
                       "expectedStatus": "passed",
                       "projectId": "Chromium",
                       "projectName": "Chromium",
-                      "results": [],
-                      "status": "skipped"
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "status": "passed",
+                          "duration": 11975,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-19T12:35:20.386Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
                     }
                   ],
                   "id": "c5c4f3ebfbbd89b5f739-a8c3934850cd20a761b2",
                   "file": "announcement.spec.ts",
-                  "line": 102,
+                  "line": 97,
                   "column": 9
                 },
                 {
                   "title": "Create announcement with maximum title length",
-                  "ok": true,
+                  "ok": false,
                   "tags": [],
                   "tests": [
                     {
                       "timeout": 60000,
-                      "annotations": [],
+                      "annotations": [
+                        {
+                          "type": "comment",
+                          "description": "Verifies that an announcement title cannot exceed the maximum character limit."
+                        }
+                      ],
                       "expectedStatus": "passed",
                       "projectId": "Chromium",
                       "projectName": "Chromium",
-                      "results": [],
-                      "status": "skipped"
+                      "results": [
+                        {
+                          "workerIndex": 1,
+                          "status": "timedOut",
+                          "duration": 64489,
+                          "error": {
+                            "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
+                            "stack": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                          },
+                          "errors": [
+                            {
+                              "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                            },
+                            {
+                              "location": {
+                                "file": "C:\\keka-engage\\Keka-engage\\pages\\announcementPage.ts",
+                                "column": 21,
+                                "line": 37
+                              },
+                              "message": "Error: page.click: Test timeout of 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//label[@for=\"groupWise\"]')\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\pages\\announcementPage.ts:37\n\n\u001b[0m \u001b[90m 35 |\u001b[39m   \u001b[36mprivate\u001b[39m \u001b[36masync\u001b[39m configureAndPublish() {\n \u001b[90m 36 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mclick(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mlocators\u001b[33m.\u001b[39mconfigurePublishBtn)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 37 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mclick(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mlocators\u001b[33m.\u001b[39mselectGroups)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 38 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mclick(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mlocators\u001b[33m.\u001b[39mincludeAllEmployeesCheckbox)\u001b[33m;\u001b[39m\n \u001b[90m 39 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mselectTodayDate()\u001b[33m;\u001b[39m\n \u001b[90m 40 |\u001b[39m     \u001b[90m//await this.page.frameLocator(this.locators.iframe).locator(this.locators.publishBtn).click();\u001b[39m\u001b[0m\n\u001b[2m    at AnnouncementPage.configureAndPublish (C:\\keka-engage\\Keka-engage\\pages\\announcementPage.ts:37:21)\u001b[22m\n\u001b[2m    at AnnouncementPage.createBasicAnnouncement (C:\\keka-engage\\Keka-engage\\pages\\announcementPage.ts:94:5)\u001b[22m\n\u001b[2m    at C:\\keka-engage\\Keka-engage\\tests\\announcement.spec.ts:107:7\u001b[22m"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-19T12:35:32.371Z",
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "C:\\keka-engage\\test-results\\announcement-Keka-Engage-A-b918b-t-with-maximum-title-length-Chromium\\test-failed-1.png"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "C:\\keka-engage\\test-results\\announcement-Keka-Engage-A-b918b-t-with-maximum-title-length-Chromium\\trace.zip"
+                            }
+                          ]
+                        },
+                        {
+                          "workerIndex": 2,
+                          "status": "timedOut",
+                          "duration": 64639,
+                          "error": {
+                            "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
+                            "stack": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                          },
+                          "errors": [
+                            {
+                              "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                            },
+                            {
+                              "location": {
+                                "file": "C:\\keka-engage\\Keka-engage\\pages\\announcementPage.ts",
+                                "column": 21,
+                                "line": 37
+                              },
+                              "message": "Error: page.click: Test timeout of 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//label[@for=\"groupWise\"]')\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\pages\\announcementPage.ts:37\n\n\u001b[0m \u001b[90m 35 |\u001b[39m   \u001b[36mprivate\u001b[39m \u001b[36masync\u001b[39m configureAndPublish() {\n \u001b[90m 36 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mclick(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mlocators\u001b[33m.\u001b[39mconfigurePublishBtn)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 37 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mclick(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mlocators\u001b[33m.\u001b[39mselectGroups)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 38 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mclick(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mlocators\u001b[33m.\u001b[39mincludeAllEmployeesCheckbox)\u001b[33m;\u001b[39m\n \u001b[90m 39 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mselectTodayDate()\u001b[33m;\u001b[39m\n \u001b[90m 40 |\u001b[39m     \u001b[90m//await this.page.frameLocator(this.locators.iframe).locator(this.locators.publishBtn).click();\u001b[39m\u001b[0m\n\u001b[2m    at AnnouncementPage.configureAndPublish (C:\\keka-engage\\Keka-engage\\pages\\announcementPage.ts:37:21)\u001b[22m\n\u001b[2m    at AnnouncementPage.createBasicAnnouncement (C:\\keka-engage\\Keka-engage\\pages\\announcementPage.ts:94:5)\u001b[22m\n\u001b[2m    at C:\\keka-engage\\Keka-engage\\tests\\announcement.spec.ts:107:7\u001b[22m"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 1,
+                          "startTime": "2025-05-19T12:36:43.674Z",
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "C:\\keka-engage\\test-results\\announcement-Keka-Engage-A-b918b-t-with-maximum-title-length-Chromium-retry1\\test-failed-1.png"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "C:\\keka-engage\\test-results\\announcement-Keka-Engage-A-b918b-t-with-maximum-title-length-Chromium-retry1\\trace.zip"
+                            }
+                          ]
+                        }
+                      ],
+                      "status": "unexpected"
                     }
                   ],
                   "id": "c5c4f3ebfbbd89b5f739-412728167747f98f222c",
                   "file": "announcement.spec.ts",
-                  "line": 108,
+                  "line": 103,
                   "column": 9
                 },
                 {
@@ -433,37 +705,184 @@
                   "tests": [
                     {
                       "timeout": 60000,
-                      "annotations": [],
+                      "annotations": [
+                        {
+                          "type": "comment",
+                          "description": "Verifies that an announcement description cannot exceed the maximum character limit."
+                        }
+                      ],
                       "expectedStatus": "passed",
                       "projectId": "Chromium",
                       "projectName": "Chromium",
-                      "results": [],
-                      "status": "skipped"
+                      "results": [
+                        {
+                          "workerIndex": 3,
+                          "status": "passed",
+                          "duration": 19265,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-19T12:37:54.536Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
                     }
                   ],
                   "id": "c5c4f3ebfbbd89b5f739-5dc2785079f0fb069fc9",
                   "file": "announcement.spec.ts",
-                  "line": 115,
+                  "line": 110,
                   "column": 9
                 },
                 {
                   "title": "Create announcement as draft and then delete",
-                  "ok": true,
+                  "ok": false,
                   "tags": [],
                   "tests": [
                     {
                       "timeout": 60000,
-                      "annotations": [],
+                      "annotations": [
+                        {
+                          "type": "comment",
+                          "description": "Verifies that a draft announcement can be successfully deleted."
+                        }
+                      ],
                       "expectedStatus": "passed",
                       "projectId": "Chromium",
                       "projectName": "Chromium",
-                      "results": [],
-                      "status": "skipped"
+                      "results": [
+                        {
+                          "workerIndex": 3,
+                          "status": "failed",
+                          "duration": 23027,
+                          "error": {
+                            "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('//*[@id=\"toast-container\"]')\nExpected string: \u001b[32m\"Success!Announcement deleted successfully.\"\u001b[39m\nReceived string: \u001b[31m\"Success!\u001b[7m!\u001b[27mAnnouncement deleted successfully.\"\u001b[39m\nCall log:\n\u001b[2m  - expect.toHaveText with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//*[@id=\"toast-container\"]')\u001b[22m\n\u001b[2m    2 × locator resolved to <div id=\"toast-container\" class=\"toast-top-right toast-container\"></div>\u001b[22m\n\u001b[2m      - unexpected value \"\"\u001b[22m\n\u001b[2m    6 × locator resolved to <div id=\"toast-container\" class=\"toast-top-right toast-container\">…</div>\u001b[22m\n\u001b[2m      - unexpected value \"Success!!Announcement deleted successfully.\"\u001b[22m\n",
+                            "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('//*[@id=\"toast-container\"]')\nExpected string: \u001b[32m\"Success!Announcement deleted successfully.\"\u001b[39m\nReceived string: \u001b[31m\"Success!\u001b[7m!\u001b[27mAnnouncement deleted successfully.\"\u001b[39m\nCall log:\n\u001b[2m  - expect.toHaveText with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//*[@id=\"toast-container\"]')\u001b[22m\n\u001b[2m    2 × locator resolved to <div id=\"toast-container\" class=\"toast-top-right toast-container\"></div>\u001b[22m\n\u001b[2m      - unexpected value \"\"\u001b[22m\n\u001b[2m    6 × locator resolved to <div id=\"toast-container\" class=\"toast-top-right toast-container\">…</div>\u001b[22m\n\u001b[2m      - unexpected value \"Success!!Announcement deleted successfully.\"\u001b[22m\n\n    at AnnouncementPage.verifyToastMessage (C:\\keka-engage\\Keka-engage\\pages\\announcementPage.ts:88:25)\n    at AnnouncementPage.deleteAnnouncement (C:\\keka-engage\\Keka-engage\\pages\\announcementPage.ts:117:5)\n    at C:\\keka-engage\\Keka-engage\\tests\\announcement.spec.ts:121:7",
+                            "matcherResult": {
+                              "name": "toHaveText",
+                              "expected": "Success!Announcement deleted successfully.",
+                              "message": "\u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('//*[@id=\"toast-container\"]')\nExpected string: \u001b[32m\"Success!Announcement deleted successfully.\"\u001b[39m\nReceived string: \u001b[31m\"Success!\u001b[7m!\u001b[27mAnnouncement deleted successfully.\"\u001b[39m\nCall log:\n\u001b[2m  - expect.toHaveText with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//*[@id=\"toast-container\"]')\u001b[22m\n\u001b[2m    2 × locator resolved to <div id=\"toast-container\" class=\"toast-top-right toast-container\"></div>\u001b[22m\n\u001b[2m      - unexpected value \"\"\u001b[22m\n\u001b[2m    6 × locator resolved to <div id=\"toast-container\" class=\"toast-top-right toast-container\">…</div>\u001b[22m\n\u001b[2m      - unexpected value \"Success!!Announcement deleted successfully.\"\u001b[22m\n",
+                              "pass": false,
+                              "actual": "Success!!Announcement deleted successfully.",
+                              "log": [
+                                "  - expect.toHaveText with timeout 5000ms",
+                                "  - waiting for locator('//*[@id=\"toast-container\"]')",
+                                "    2 × locator resolved to <div id=\"toast-container\" class=\"toast-top-right toast-container\"></div>",
+                                "      - unexpected value \"\"",
+                                "    6 × locator resolved to <div id=\"toast-container\" class=\"toast-top-right toast-container\">…</div>",
+                                "      - unexpected value \"Success!!Announcement deleted successfully.\""
+                              ],
+                              "timeout": 5000
+                            },
+                            "location": {
+                              "file": "C:\\keka-engage\\Keka-engage\\pages\\announcementPage.ts",
+                              "column": 25,
+                              "line": 88
+                            },
+                            "snippet": "\u001b[90m   at \u001b[39m..\\pages\\announcementPage.ts:88\n\n\u001b[0m \u001b[90m 86 |\u001b[39m     \u001b[36mconst\u001b[39m toast \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mlocators\u001b[33m.\u001b[39mtoastMessage)\u001b[33m;\u001b[39m\n \u001b[90m 87 |\u001b[39m     \u001b[36mawait\u001b[39m expect(toast)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 88 |\u001b[39m     \u001b[36mawait\u001b[39m expect(toast)\u001b[33m.\u001b[39mtoHaveText(expectedText)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 89 |\u001b[39m   }\n \u001b[90m 90 |\u001b[39m\n \u001b[90m 91 |\u001b[39m   \u001b[36masync\u001b[39m createBasicAnnouncement(title\u001b[33m:\u001b[39m string\u001b[33m,\u001b[39m description\u001b[33m:\u001b[39m string) {\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "C:\\keka-engage\\Keka-engage\\pages\\announcementPage.ts",
+                                "column": 25,
+                                "line": 88
+                              },
+                              "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('//*[@id=\"toast-container\"]')\nExpected string: \u001b[32m\"Success!Announcement deleted successfully.\"\u001b[39m\nReceived string: \u001b[31m\"Success!\u001b[7m!\u001b[27mAnnouncement deleted successfully.\"\u001b[39m\nCall log:\n\u001b[2m  - expect.toHaveText with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//*[@id=\"toast-container\"]')\u001b[22m\n\u001b[2m    2 × locator resolved to <div id=\"toast-container\" class=\"toast-top-right toast-container\"></div>\u001b[22m\n\u001b[2m      - unexpected value \"\"\u001b[22m\n\u001b[2m    6 × locator resolved to <div id=\"toast-container\" class=\"toast-top-right toast-container\">…</div>\u001b[22m\n\u001b[2m      - unexpected value \"Success!!Announcement deleted successfully.\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\pages\\announcementPage.ts:88\n\n\u001b[0m \u001b[90m 86 |\u001b[39m     \u001b[36mconst\u001b[39m toast \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mlocators\u001b[33m.\u001b[39mtoastMessage)\u001b[33m;\u001b[39m\n \u001b[90m 87 |\u001b[39m     \u001b[36mawait\u001b[39m expect(toast)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 88 |\u001b[39m     \u001b[36mawait\u001b[39m expect(toast)\u001b[33m.\u001b[39mtoHaveText(expectedText)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 89 |\u001b[39m   }\n \u001b[90m 90 |\u001b[39m\n \u001b[90m 91 |\u001b[39m   \u001b[36masync\u001b[39m createBasicAnnouncement(title\u001b[33m:\u001b[39m string\u001b[33m,\u001b[39m description\u001b[33m:\u001b[39m string) {\u001b[0m\n\u001b[2m    at AnnouncementPage.verifyToastMessage (C:\\keka-engage\\Keka-engage\\pages\\announcementPage.ts:88:25)\u001b[22m\n\u001b[2m    at AnnouncementPage.deleteAnnouncement (C:\\keka-engage\\Keka-engage\\pages\\announcementPage.ts:117:5)\u001b[22m\n\u001b[2m    at C:\\keka-engage\\Keka-engage\\tests\\announcement.spec.ts:121:7\u001b[22m"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-19T12:38:14.236Z",
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "C:\\keka-engage\\test-results\\announcement-Keka-Engage-A-fb79a-nt-as-draft-and-then-delete-Chromium\\test-failed-1.png"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "C:\\keka-engage\\test-results\\announcement-Keka-Engage-A-fb79a-nt-as-draft-and-then-delete-Chromium\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "C:\\keka-engage\\Keka-engage\\pages\\announcementPage.ts",
+                            "column": 25,
+                            "line": 88
+                          }
+                        },
+                        {
+                          "workerIndex": 4,
+                          "status": "failed",
+                          "duration": 21602,
+                          "error": {
+                            "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('//*[@id=\"toast-container\"]')\nExpected string: \u001b[32m\"Success!Announcement deleted successfully.\"\u001b[39m\nReceived string: \u001b[31m\"Success!\u001b[7m!\u001b[27mAnnouncement deleted successfully.\"\u001b[39m\nCall log:\n\u001b[2m  - expect.toHaveText with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//*[@id=\"toast-container\"]')\u001b[22m\n\u001b[2m    4 × locator resolved to <div id=\"toast-container\" class=\"toast-top-right toast-container\">…</div>\u001b[22m\n\u001b[2m      - unexpected value \"Success!!Announcement saved successfully.\"\u001b[22m\n\u001b[2m    4 × locator resolved to <div id=\"toast-container\" class=\"toast-top-right toast-container\">…</div>\u001b[22m\n\u001b[2m      - unexpected value \"Success!!Announcement deleted successfully.\"\u001b[22m\n",
+                            "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('//*[@id=\"toast-container\"]')\nExpected string: \u001b[32m\"Success!Announcement deleted successfully.\"\u001b[39m\nReceived string: \u001b[31m\"Success!\u001b[7m!\u001b[27mAnnouncement deleted successfully.\"\u001b[39m\nCall log:\n\u001b[2m  - expect.toHaveText with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//*[@id=\"toast-container\"]')\u001b[22m\n\u001b[2m    4 × locator resolved to <div id=\"toast-container\" class=\"toast-top-right toast-container\">…</div>\u001b[22m\n\u001b[2m      - unexpected value \"Success!!Announcement saved successfully.\"\u001b[22m\n\u001b[2m    4 × locator resolved to <div id=\"toast-container\" class=\"toast-top-right toast-container\">…</div>\u001b[22m\n\u001b[2m      - unexpected value \"Success!!Announcement deleted successfully.\"\u001b[22m\n\n    at AnnouncementPage.verifyToastMessage (C:\\keka-engage\\Keka-engage\\pages\\announcementPage.ts:88:25)\n    at AnnouncementPage.deleteAnnouncement (C:\\keka-engage\\Keka-engage\\pages\\announcementPage.ts:117:5)\n    at C:\\keka-engage\\Keka-engage\\tests\\announcement.spec.ts:121:7",
+                            "matcherResult": {
+                              "name": "toHaveText",
+                              "expected": "Success!Announcement deleted successfully.",
+                              "message": "\u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('//*[@id=\"toast-container\"]')\nExpected string: \u001b[32m\"Success!Announcement deleted successfully.\"\u001b[39m\nReceived string: \u001b[31m\"Success!\u001b[7m!\u001b[27mAnnouncement deleted successfully.\"\u001b[39m\nCall log:\n\u001b[2m  - expect.toHaveText with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//*[@id=\"toast-container\"]')\u001b[22m\n\u001b[2m    4 × locator resolved to <div id=\"toast-container\" class=\"toast-top-right toast-container\">…</div>\u001b[22m\n\u001b[2m      - unexpected value \"Success!!Announcement saved successfully.\"\u001b[22m\n\u001b[2m    4 × locator resolved to <div id=\"toast-container\" class=\"toast-top-right toast-container\">…</div>\u001b[22m\n\u001b[2m      - unexpected value \"Success!!Announcement deleted successfully.\"\u001b[22m\n",
+                              "pass": false,
+                              "actual": "Success!!Announcement deleted successfully.",
+                              "log": [
+                                "  - expect.toHaveText with timeout 5000ms",
+                                "  - waiting for locator('//*[@id=\"toast-container\"]')",
+                                "    4 × locator resolved to <div id=\"toast-container\" class=\"toast-top-right toast-container\">…</div>",
+                                "      - unexpected value \"Success!!Announcement saved successfully.\"",
+                                "    4 × locator resolved to <div id=\"toast-container\" class=\"toast-top-right toast-container\">…</div>",
+                                "      - unexpected value \"Success!!Announcement deleted successfully.\""
+                              ],
+                              "timeout": 5000
+                            },
+                            "location": {
+                              "file": "C:\\keka-engage\\Keka-engage\\pages\\announcementPage.ts",
+                              "column": 25,
+                              "line": 88
+                            },
+                            "snippet": "\u001b[90m   at \u001b[39m..\\pages\\announcementPage.ts:88\n\n\u001b[0m \u001b[90m 86 |\u001b[39m     \u001b[36mconst\u001b[39m toast \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mlocators\u001b[33m.\u001b[39mtoastMessage)\u001b[33m;\u001b[39m\n \u001b[90m 87 |\u001b[39m     \u001b[36mawait\u001b[39m expect(toast)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 88 |\u001b[39m     \u001b[36mawait\u001b[39m expect(toast)\u001b[33m.\u001b[39mtoHaveText(expectedText)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 89 |\u001b[39m   }\n \u001b[90m 90 |\u001b[39m\n \u001b[90m 91 |\u001b[39m   \u001b[36masync\u001b[39m createBasicAnnouncement(title\u001b[33m:\u001b[39m string\u001b[33m,\u001b[39m description\u001b[33m:\u001b[39m string) {\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "C:\\keka-engage\\Keka-engage\\pages\\announcementPage.ts",
+                                "column": 25,
+                                "line": 88
+                              },
+                              "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('//*[@id=\"toast-container\"]')\nExpected string: \u001b[32m\"Success!Announcement deleted successfully.\"\u001b[39m\nReceived string: \u001b[31m\"Success!\u001b[7m!\u001b[27mAnnouncement deleted successfully.\"\u001b[39m\nCall log:\n\u001b[2m  - expect.toHaveText with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//*[@id=\"toast-container\"]')\u001b[22m\n\u001b[2m    4 × locator resolved to <div id=\"toast-container\" class=\"toast-top-right toast-container\">…</div>\u001b[22m\n\u001b[2m      - unexpected value \"Success!!Announcement saved successfully.\"\u001b[22m\n\u001b[2m    4 × locator resolved to <div id=\"toast-container\" class=\"toast-top-right toast-container\">…</div>\u001b[22m\n\u001b[2m      - unexpected value \"Success!!Announcement deleted successfully.\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\pages\\announcementPage.ts:88\n\n\u001b[0m \u001b[90m 86 |\u001b[39m     \u001b[36mconst\u001b[39m toast \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mlocators\u001b[33m.\u001b[39mtoastMessage)\u001b[33m;\u001b[39m\n \u001b[90m 87 |\u001b[39m     \u001b[36mawait\u001b[39m expect(toast)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 88 |\u001b[39m     \u001b[36mawait\u001b[39m expect(toast)\u001b[33m.\u001b[39mtoHaveText(expectedText)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 89 |\u001b[39m   }\n \u001b[90m 90 |\u001b[39m\n \u001b[90m 91 |\u001b[39m   \u001b[36masync\u001b[39m createBasicAnnouncement(title\u001b[33m:\u001b[39m string\u001b[33m,\u001b[39m description\u001b[33m:\u001b[39m string) {\u001b[0m\n\u001b[2m    at AnnouncementPage.verifyToastMessage (C:\\keka-engage\\Keka-engage\\pages\\announcementPage.ts:88:25)\u001b[22m\n\u001b[2m    at AnnouncementPage.deleteAnnouncement (C:\\keka-engage\\Keka-engage\\pages\\announcementPage.ts:117:5)\u001b[22m\n\u001b[2m    at C:\\keka-engage\\Keka-engage\\tests\\announcement.spec.ts:121:7\u001b[22m"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 1,
+                          "startTime": "2025-05-19T12:38:42.059Z",
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "C:\\keka-engage\\test-results\\announcement-Keka-Engage-A-fb79a-nt-as-draft-and-then-delete-Chromium-retry1\\test-failed-1.png"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "C:\\keka-engage\\test-results\\announcement-Keka-Engage-A-fb79a-nt-as-draft-and-then-delete-Chromium-retry1\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "C:\\keka-engage\\Keka-engage\\pages\\announcementPage.ts",
+                            "column": 25,
+                            "line": 88
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
                     }
                   ],
                   "id": "c5c4f3ebfbbd89b5f739-d454b85507bf46e5c1ad",
                   "file": "announcement.spec.ts",
-                  "line": 122,
+                  "line": 117,
                   "column": 9
                 },
                 {
@@ -473,17 +892,34 @@
                   "tests": [
                     {
                       "timeout": 60000,
-                      "annotations": [],
+                      "annotations": [
+                        {
+                          "type": "comment",
+                          "description": "Ensures that an HR Manager cannot manage announcements when the permission is disabled."
+                        }
+                      ],
                       "expectedStatus": "passed",
                       "projectId": "Chromium",
                       "projectName": "Chromium",
-                      "results": [],
-                      "status": "skipped"
+                      "results": [
+                        {
+                          "workerIndex": 5,
+                          "status": "passed",
+                          "duration": 10788,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-19T12:39:07.171Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
                     }
                   ],
                   "id": "c5c4f3ebfbbd89b5f739-d038d885ccae9152f686",
                   "file": "announcement.spec.ts",
-                  "line": 129,
+                  "line": 124,
                   "column": 9
                 }
               ]
@@ -495,11 +931,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-05-19T10:13:12.211Z",
-    "duration": 34981.216,
-    "expected": 0,
-    "skipped": 17,
-    "unexpected": 0,
-    "flaky": 0
+    "startTime": "2025-05-19T12:32:15.973Z",
+    "duration": 422774.787,
+    "expected": 13,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 1
   }
 }
