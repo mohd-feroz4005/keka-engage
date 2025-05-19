@@ -42,7 +42,8 @@ export class AnnouncementPage extends BasePage {
     await this.verifyToastMessage(Published_toaster);
   }
 
-  private async configureAndPublishForWall() {
+  async configureAndPublishForWall() {
+    
     await this.page.click(this.locators.configurePublishBtn);
     await this.selectTodayDate();
     await this.page.click(this.locators.publishBtn);
@@ -67,8 +68,18 @@ export class AnnouncementPage extends BasePage {
     tomorrow.setDate(tomorrow.getDate() + 3);
     const day = tomorrow.getDate();
     await this.page
-      .locator('.bs-datepicker-container td:has-text("${day}")')
-      .click();
+    .locator(`.bs-datepicker-container td:has-text("${day}")`)
+    .click();
+    await this.page.click(this.locators.chooseEndDateField); // <-- Replace with actual locator
+await this.page.waitForSelector("bs-datepicker-container", { state: "visible" });
+
+const closeDate = new Date();
+closeDate.setDate(closeDate.getDate() + 3);
+const closeDay = closeDate.getDate();
+
+await this.page
+  .locator(`.bs-datepicker-container td:has-text("${closeDay}")`)
+  .click();
   }
 
   private async verifyToastMessage(expectedText: string) {
@@ -161,10 +172,9 @@ export class AnnouncementPage extends BasePage {
     await this.page.click(this.locators.includeAllEmployeesCheckbox);
     await this.selectpublishDate();
     await this.page.click(this.locators.publishBtn);
-    await this.verifyToastMessage(Published_toaster);
-    await this.selectFutureDate();
-    await this.configureAndPublish();
-    await this.verifyToastMessage("Success!Announcement published successfully.");
+    await this.verifyToastMessage(Schedule_toaster);
+    //await this.selectFutureDate();
+  
   }
 
   async acknowledgeAnnouncement() {
@@ -202,13 +212,24 @@ export class AnnouncementPage extends BasePage {
     await this.configureAndPublish();
     
   }
-  async CreateNoouncementwithuploadimage() {
+ 
+  async CreateAnnouncementwithpixelimage() {
     await this.page.click(this.locators.newAnnouncementBtn);
     await this.fillAnnouncementDetails(TEST_ANNOUNCEMENT.title, TEST_ANNOUNCEMENT.description);
-    await this.page.click(this.locators.uploadImage);
-    // Ensure the file input field is correctly targeted
-    const fileInput = this.page.locator(this.locators.uploadImage);
-    await fileInput.setInputFiles("C:\\Users\\mohammed.feroz\\Desktop\\images");
+    await this.page.getByText('Get from Pexels').click();
+    await this.page.locator('div.modal-content img.border-radius-4.object-fit-cover').first().click();
+    await this.page.click('text=Save image');
     await this.configureAndPublish();
-  }
+    await this.verifyToastMessage(Published_toaster);
+}
+ async createAnnouncementfromwall() {
+  await this.page.locator('span.ki-add').click();
+  await this.fillAnnouncementDetails(TEST_ANNOUNCEMENT.title, TEST_ANNOUNCEMENT.description);
+  await this.configureAndPublishForWall();
+ }
+
+ async saveAnnouncementsettings() {
+  await this.page.getByText('Save Settings').click();
+  await this.verifyToastMessage("Success!Settings saved successfully.");
+}
 }

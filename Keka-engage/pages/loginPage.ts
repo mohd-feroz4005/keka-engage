@@ -37,11 +37,15 @@ export class KekaLoginPage extends BasePage {
     }
     await this.page.fill(this.usernameField, username);
     await this.page.click(this.submitButton)
+    await this.page.getByText('Continue with Password').click();
+
     await this.page.fill(this.passwordField, password);
     await this.addHiddenCaptchaBypass();
     await this.page.fill(this.captchaField, '12345');
     await this.page.click(this.submitButton);
-    await this.page.click(this.tenantSelect);
+    await this.page.getByText('aarthi.kekastage.com').click();
+
+    //await this.page.click(this.tenantSelect);
    // await this.page.locator(this.invoicePopup).isVisible();
     //await this.page.locator(this.closeInvoiceButton).click();
     //await this.waitForNetworkIdle();

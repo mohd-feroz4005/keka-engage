@@ -1,4 +1,12 @@
 import { PlaywrightTestConfig } from '@playwright/test';
+import * as fs from 'fs';
+import * as path from 'path';
+
+const resultsDir = path.join(__dirname, 'test-results');
+if (fs.existsSync(resultsDir)) {
+  fs.rmSync(resultsDir, { recursive: true, force: true });
+  console.log('test-results folder was removed.');
+}
 
 const config: PlaywrightTestConfig = {
   testDir: 'Keka-engage/tests',
