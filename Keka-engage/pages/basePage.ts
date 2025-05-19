@@ -6,6 +6,7 @@ export class BasePage {
 
   constructor(page: Page) {
     this.page = page;
+    
   }
 
   async waitForNetworkIdle() {
