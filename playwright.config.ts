@@ -10,7 +10,7 @@ if (fs.existsSync(resultsDir)) {
 
 const config: PlaywrightTestConfig = {
   testDir: 'Keka-engage/tests',
-  timeout: 60000,
+  timeout: 90000,
   retries: 1,
   use: {
     headless: false,

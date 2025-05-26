@@ -12,7 +12,7 @@ import {
   Role_updated,
   Schedule_toaster,
 } from "../config/constants";
-import { TEST_ANNOUNCEMENT} from "../config/testData";
+import { TEST_ANNOUNCEMENT} from "../TestData/AnnouncementTestdata";
 
 
 export class AnnouncementPage extends BasePage {

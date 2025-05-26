@@ -2,7 +2,7 @@
 import { test, expect } from "@playwright/test";
 import { KekaLoginPage } from "../pages/loginPage";
 import { AnnouncementPage } from "../pages/announcementPage";
-import { TEST_ANNOUNCEMENT } from "../config/testData";
+import { TEST_ANNOUNCEMENT } from "../TestData/AnnouncementTestdata";
 
 test.describe("Keka Engage Announcement Tests", () => {
   let loginPage: KekaLoginPage;
