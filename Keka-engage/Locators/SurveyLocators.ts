@@ -1,0 +1,38 @@
+export const surveyLocators = {
+    NewSurveyButton: "//a[span[text()='New survey']]", 
+    CreateFromScratch: "(//a[@class='dropdown-item'])[1]",
+    CreateFromTemplate: "(//a[@class='dropdown-item'])[2]",
+    SurveyNameField: "(//input[@placeholder='Enter name'])",
+    SurveyDescriptionField: "//input[@placeholder='Description']",
+    SurveyCancelButton:"(//button[text()='Cancel'])",
+    SurveyCreateButton: "(//button[text()='Save'])",
+    CreateNewQuestionButton: "(//a[@id='dropdown-menu'])[21]",
+    ShortTextQuestion: "//a[span[text()='Short text']]",
+    LongTextQuestion: "//a[span[text()='Long text']]",
+    MultiSelectQuestion: "//a[span[text()='Multi select']]",
+    YesNoQuestion: "//a[span[text()='Yes/No']]",
+    RatingScaleQuestion: "//a[span[text()='Rating scale']]",
+    SingleChoiceQuestion: "//a[span[text()='Single choice']]",
+    EnterQuestionNameField: "//input[@formcontrolname='prompt']",
+    SaveQuestionButton: "(//button[text() = 'Save question'])",
+    SettingRequiredQuestion: "//label[@for='questionRequired']",
+    SettingMaxCharacters: "//label[@for='characterLimitEnabled']",
+    CharacterLimitField: "[formcontrolname='characterLimit']",
+    ConfigurePublishButton: "//button [text() = 'Configure and Publish']",
+    SelectAllEmployeesRadioButton: "//label [@for = 'allEmployees']",
+    GroupWiseRadioButton: "//label [@for = 'groupWise']",
+    SelectEmployeesRadioButton: "//label [@for = 'otherEmployees']",
+    SearchEmployeeField: "//input[@placeholder = 'Search People']",
+    FirstMatchingEmployee: "//typeahead-container//button[contains(@class, 'dropdown-item')][1]",
+    StartDateField: "//input[@placeholder = 'Start Date']",
+    EndDateField: "//input[@placeholder = 'End Date']",
+    MakeAnnonymousToggle: "//label [@for ='allowAnonymousResponse']",
+    SurveySaveSettingsBButton: "//button [text() = 'Save Settings']",
+    SurveyPublishButton: "//button [text() = 'Publish']",
+    CurrentDate: "span.today-date-highlight",
+    ToastMessage: '//*[@id="toast-container"]',
+
+
+
+
+}   
