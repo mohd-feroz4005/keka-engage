@@ -2,6 +2,7 @@ import { BasePage } from "./basePage";
 import { expect } from "@playwright/test";
 import { locators } from "../Locators/Walllocators"
 import { TEST_ANNOUNCEMENT } from "../TestData/AnnouncementTestdata";
+import {Dashboard_URL, Survey_URL} from "../config/constants";
 
 
 export class WallPage extends BasePage {
@@ -9,7 +10,7 @@ export class WallPage extends BasePage {
     private readonly locators = locators;
     
     async navigateToWall() {
-        await this.page.goto("https://aarthi.kekastage.com/#/home/dashboard");
+        await this.page.goto(Dashboard_URL);
     }
     
    async postOnWall(taguser: string, tagusername: string) {
