@@ -129,9 +129,9 @@ export class SurveyPage extends BasePage {
 
     async verifyToastMessage(expectedText: string) {
         const toast = this.page.locator(this.locators.ToastMessage);
-        await expect(toast).toBeVisible({ timeout: 5000 });
+        await expect(toast).toBeVisible();
         await expect(toast).toHaveText(expectedText);
-        await this.page.waitForTimeout(5000); // Wait for toast to disappear
+        //await this.page.waitForTimeout(5000); // Wait for toast to disappear
     }
     async takeSurvey() {
         if (!this.surveyName) {
@@ -163,4 +163,18 @@ export class SurveyPage extends BasePage {
         await this.page.context().close();
  
     }
+    async CreateSurveyFromTemplate(templateTitle: string) {
+    console.log(`Creating survey from template: ${templateTitle}...`);
+    await this.waitAndClick(this.locators.NewSurveyButton);
+    await this.waitAndClick(this.locators.CreateFromTemplate);
+    // Wait for the template selection to be visible
+    await this.page.waitForSelector(this.locators.SelectSurveyTemplate(templateTitle), { state: "visible", timeout: 5000 });
+    const useTemplateBtn = this.page.locator(this.locators.SelectSurveyTemplate(templateTitle));
+    await useTemplateBtn.waitFor({ state: "visible", timeout: 5000 });
+    await useTemplateBtn.click();
+    // Optionally, you can add more steps to fill in the survey name and description if needed
+    // For example, if you want to set the survey name and description:
+    await this.waitAndClick(this.locators.SurveyCreateButton);
+    console.log(`Selected survey template: ${templateTitle}`);
+}
 }
