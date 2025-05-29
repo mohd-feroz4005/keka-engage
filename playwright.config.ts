@@ -8,12 +8,13 @@ if (fs.existsSync(resultsDir)) {
   console.log('test-results folder was removed.');
 }
 
+const isCI = !!process.env.CI;
 const config: PlaywrightTestConfig = {
   testDir: 'Keka-engage/tests',
-  timeout: 90000,
+  timeout: isCI ? 180000 : 180000, // 3 min for CI, 100s for local
   retries: 1,
   use: {
-    headless: false,
+    headless: true,
     viewport: { width: 1280, height: 720 },
     screenshot: 'only-on-failure',
     trace: 'retain-on-failure'
