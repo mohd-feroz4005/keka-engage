@@ -39,6 +39,7 @@ export const surveyLocators = {
     RatingScaleStar: "(//span[contains(@class, 'ki-star') and contains(@class, 'cursor-pointer')])[3]",
     SurveySubmitButton: "//button[text()='Submit']",
     BackToKekaWallButton: "//button[text()='Back to Keka Wall']",
+    SelectSurveyTemplate: (cardTitle: string) => `//p[text()='${cardTitle}']/ancestor::div[contains(@class,'card')]//span[text()='Use this Template']`
 
     
 

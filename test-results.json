@@ -76,11 +76,11 @@
         {
           "title": "Keka Engage Survey Tests",
           "file": "Survey.spec.ts",
-          "line": 9,
+          "line": 10,
           "column": 6,
           "specs": [
             {
-              "title": "Create survey with Short and Special Questions",
+              "title": "Create survey with Survey Template",
               "ok": true,
               "tags": [],
               "tests": [
@@ -89,7 +89,7 @@
                   "annotations": [
                     {
                       "type": "comment",
-                      "description": "Verifies that a survey can be created with short and special questions."
+                      "description": "Verifies that a survey can be created using a template."
                     }
                   ],
                   "expectedStatus": "passed",
@@ -99,41 +99,14 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 139928,
+                      "duration": 92825,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "Creating a new survey...\n"
+                          "text": "Creating survey from template: Team Performance Survey...\n"
                         },
                         {
-                          "text": "Adding a short text question...\n"
-                        },
-                        {
-                          "text": "Marking question as required...\n"
-                        },
-                        {
-                          "text": "Saving a new question...\n"
-                        },
-                        {
-                          "text": "Adding a long text question...\n"
-                        },
-                        {
-                          "text": "Setting max character limit to 100...\n"
-                        },
-                        {
-                          "text": "Saving a new question...\n"
-                        },
-                        {
-                          "text": "Adding a yesno question...\n"
-                        },
-                        {
-                          "text": "Saving a new question...\n"
-                        },
-                        {
-                          "text": "Adding a rating question...\n"
-                        },
-                        {
-                          "text": "Saving a new question...\n"
+                          "text": "Selected survey template: Team Performance Survey\n"
                         },
                         {
                           "text": "Configuring and publishing survey...\n"
@@ -141,145 +114,17 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-05-28T10:35:21.625Z",
+                      "startTime": "2025-05-29T12:56:30.989Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "4d3d75d44e6cfbf3df2b-43be5ec277483cd4d298",
+              "id": "4d3d75d44e6cfbf3df2b-4a1ea0c6a3b422bbc82c",
               "file": "Survey.spec.ts",
-              "line": 84,
-              "column": 9
-            }
-          ],
-          "suites": [
-            {
-              "title": "Employee Survey Participation",
-              "file": "Survey.spec.ts",
-              "line": 107,
-              "column": 10,
-              "specs": [
-                {
-                  "title": "Employee takes survey",
-                  "ok": false,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 180000,
-                      "annotations": [
-                        {
-                          "type": "comment",
-                          "description": "Verifies that an employee can take a survey."
-                        }
-                      ],
-                      "expectedStatus": "passed",
-                      "projectId": "Chromium",
-                      "projectName": "Chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "status": "failed",
-                          "duration": 7466,
-                          "error": {
-                            "message": "Error: Survey name is not set. Please create or set the survey name before taking the survey.",
-                            "stack": "Error: Survey name is not set. Please create or set the survey name before taking the survey.\n    at SurveyPage.takeSurvey (C:\\keka-engage\\Keka-engage\\pages\\surveyPage.ts:138:19)\n    at C:\\keka-engage\\Keka-engage\\tests\\Survey.spec.ts:115:22",
-                            "location": {
-                              "file": "C:\\keka-engage\\Keka-engage\\pages\\surveyPage.ts",
-                              "column": 19,
-                              "line": 138
-                            },
-                            "snippet": "\u001b[90m   at \u001b[39m..\\pages\\surveyPage.ts:138\n\n\u001b[0m \u001b[90m 136 |\u001b[39m     \u001b[36masync\u001b[39m takeSurvey() {\n \u001b[90m 137 |\u001b[39m         \u001b[36mif\u001b[39m (\u001b[33m!\u001b[39m\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39msurveyName) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 138 |\u001b[39m             \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m\"Survey name is not set. Please create or set the survey name before taking the survey.\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 139 |\u001b[39m         }\n \u001b[90m 140 |\u001b[39m         console\u001b[33m.\u001b[39mlog(\u001b[32m`Taking the survey: ${this.surveyName}...`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 141 |\u001b[39m         \u001b[90m// Find the \"Take Survey\" button for the survey with the stored name\u001b[39m\u001b[0m"
-                          },
-                          "errors": [
-                            {
-                              "location": {
-                                "file": "C:\\keka-engage\\Keka-engage\\pages\\surveyPage.ts",
-                                "column": 19,
-                                "line": 138
-                              },
-                              "message": "Error: Survey name is not set. Please create or set the survey name before taking the survey.\n\n\u001b[90m   at \u001b[39m..\\pages\\surveyPage.ts:138\n\n\u001b[0m \u001b[90m 136 |\u001b[39m     \u001b[36masync\u001b[39m takeSurvey() {\n \u001b[90m 137 |\u001b[39m         \u001b[36mif\u001b[39m (\u001b[33m!\u001b[39m\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39msurveyName) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 138 |\u001b[39m             \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m\"Survey name is not set. Please create or set the survey name before taking the survey.\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 139 |\u001b[39m         }\n \u001b[90m 140 |\u001b[39m         console\u001b[33m.\u001b[39mlog(\u001b[32m`Taking the survey: ${this.surveyName}...`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 141 |\u001b[39m         \u001b[90m// Find the \"Take Survey\" button for the survey with the stored name\u001b[39m\u001b[0m\n\u001b[2m    at SurveyPage.takeSurvey (C:\\keka-engage\\Keka-engage\\pages\\surveyPage.ts:138:19)\u001b[22m\n\u001b[2m    at C:\\keka-engage\\Keka-engage\\tests\\Survey.spec.ts:115:22\u001b[22m"
-                            }
-                          ],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2025-05-28T10:37:42.247Z",
-                          "attachments": [
-                            {
-                              "name": "screenshot",
-                              "contentType": "image/png",
-                              "path": "C:\\keka-engage\\test-results\\Survey-Keka-Engage-Survey--2ce88-ation-Employee-takes-survey-Chromium\\test-failed-1.png"
-                            },
-                            {
-                              "name": "trace",
-                              "contentType": "application/zip",
-                              "path": "C:\\keka-engage\\test-results\\Survey-Keka-Engage-Survey--2ce88-ation-Employee-takes-survey-Chromium\\trace.zip"
-                            }
-                          ],
-                          "errorLocation": {
-                            "file": "C:\\keka-engage\\Keka-engage\\pages\\surveyPage.ts",
-                            "column": 19,
-                            "line": 138
-                          }
-                        },
-                        {
-                          "workerIndex": 1,
-                          "status": "failed",
-                          "duration": 8739,
-                          "error": {
-                            "message": "Error: Survey name is not set. Please create or set the survey name before taking the survey.",
-                            "stack": "Error: Survey name is not set. Please create or set the survey name before taking the survey.\n    at SurveyPage.takeSurvey (C:\\keka-engage\\Keka-engage\\pages\\surveyPage.ts:138:19)\n    at C:\\keka-engage\\Keka-engage\\tests\\Survey.spec.ts:115:22",
-                            "location": {
-                              "file": "C:\\keka-engage\\Keka-engage\\pages\\surveyPage.ts",
-                              "column": 19,
-                              "line": 138
-                            },
-                            "snippet": "\u001b[90m   at \u001b[39m..\\pages\\surveyPage.ts:138\n\n\u001b[0m \u001b[90m 136 |\u001b[39m     \u001b[36masync\u001b[39m takeSurvey() {\n \u001b[90m 137 |\u001b[39m         \u001b[36mif\u001b[39m (\u001b[33m!\u001b[39m\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39msurveyName) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 138 |\u001b[39m             \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m\"Survey name is not set. Please create or set the survey name before taking the survey.\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 139 |\u001b[39m         }\n \u001b[90m 140 |\u001b[39m         console\u001b[33m.\u001b[39mlog(\u001b[32m`Taking the survey: ${this.surveyName}...`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 141 |\u001b[39m         \u001b[90m// Find the \"Take Survey\" button for the survey with the stored name\u001b[39m\u001b[0m"
-                          },
-                          "errors": [
-                            {
-                              "location": {
-                                "file": "C:\\keka-engage\\Keka-engage\\pages\\surveyPage.ts",
-                                "column": 19,
-                                "line": 138
-                              },
-                              "message": "Error: Survey name is not set. Please create or set the survey name before taking the survey.\n\n\u001b[90m   at \u001b[39m..\\pages\\surveyPage.ts:138\n\n\u001b[0m \u001b[90m 136 |\u001b[39m     \u001b[36masync\u001b[39m takeSurvey() {\n \u001b[90m 137 |\u001b[39m         \u001b[36mif\u001b[39m (\u001b[33m!\u001b[39m\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39msurveyName) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 138 |\u001b[39m             \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m\"Survey name is not set. Please create or set the survey name before taking the survey.\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 139 |\u001b[39m         }\n \u001b[90m 140 |\u001b[39m         console\u001b[33m.\u001b[39mlog(\u001b[32m`Taking the survey: ${this.surveyName}...`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 141 |\u001b[39m         \u001b[90m// Find the \"Take Survey\" button for the survey with the stored name\u001b[39m\u001b[0m\n\u001b[2m    at SurveyPage.takeSurvey (C:\\keka-engage\\Keka-engage\\pages\\surveyPage.ts:138:19)\u001b[22m\n\u001b[2m    at C:\\keka-engage\\Keka-engage\\tests\\Survey.spec.ts:115:22\u001b[22m"
-                            }
-                          ],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 1,
-                          "startTime": "2025-05-28T10:37:53.485Z",
-                          "attachments": [
-                            {
-                              "name": "screenshot",
-                              "contentType": "image/png",
-                              "path": "C:\\keka-engage\\test-results\\Survey-Keka-Engage-Survey--2ce88-ation-Employee-takes-survey-Chromium-retry1\\test-failed-1.png"
-                            },
-                            {
-                              "name": "trace",
-                              "contentType": "application/zip",
-                              "path": "C:\\keka-engage\\test-results\\Survey-Keka-Engage-Survey--2ce88-ation-Employee-takes-survey-Chromium-retry1\\trace.zip"
-                            }
-                          ],
-                          "errorLocation": {
-                            "file": "C:\\keka-engage\\Keka-engage\\pages\\surveyPage.ts",
-                            "column": 19,
-                            "line": 138
-                          }
-                        }
-                      ],
-                      "status": "unexpected"
-                    }
-                  ],
-                  "id": "4d3d75d44e6cfbf3df2b-ce23c59210f56964d445",
-                  "file": "Survey.spec.ts",
-                  "line": 108,
-                  "column": 7
-                }
-              ]
+              "line": 88,
+              "column": 7
             }
           ]
         }
@@ -288,11 +133,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-05-28T10:35:19.219Z",
-    "duration": 164651.15,
+    "startTime": "2025-05-29T12:56:27.400Z",
+    "duration": 99815.998,
     "expected": 1,
     "skipped": 0,
-    "unexpected": 1,
+    "unexpected": 0,
     "flaky": 0
   }
 }
