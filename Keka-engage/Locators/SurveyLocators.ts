@@ -31,6 +31,16 @@ export const surveyLocators = {
     SurveyPublishButton: "//button [text() = 'Publish']",
     CurrentDate: "span.today-date-highlight",
     ToastMessage: '//*[@id="toast-container"]',
+    TakeSurveyButton: (surveyName: string) => `xpath=//p[@title="${surveyName}"]/ancestor::div[contains(@class, 'card-body')]//button[contains(text(), 'Take Survey')]`,
+    ContinueSurveyButton: "//button[text()='Continue']",
+    QuestionAnsInputField: "[formcontrolname = 'textResponse']",
+    YesAnswerButton: "//div[p[normalize-space(text())='Yes']]",
+    NoAnswerButton: "//div[p[normalize-space(text())='No']]",
+    RatingScaleStar: "(//span[contains(@class, 'ki-star') and contains(@class, 'cursor-pointer')])[3]",
+    SurveySubmitButton: "//button[text()='Submit']",
+    BackToKekaWallButton: "//button[text()='Back to Keka Wall']",
+
+    
 
 
 

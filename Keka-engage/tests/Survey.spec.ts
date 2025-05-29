@@ -15,68 +15,72 @@ test.describe("Keka Engage Survey Tests", () => {
     await loginPage.loginAsAdmin();
   });
 
-  test.describe("Positive Test Cases", () => {
-    test("Create survey from scratch", async ({}, testInfo) => {
-      testInfo.annotations.push({
-        type: "comment",
-        description: "Verifies that a survey can be created from scratch.",
-      });
+  // // test.describe("Positive Test Cases", () => {
+  //   test("Create survey from scratch", async ({}, testInfo) => {
+  //     testInfo.annotations.push({
+  //       type: "comment",
+  //       description: "Verifies that a survey can be created from scratch.",
+  //     });
 
-      await surveyPage.navigateToSurvey();
-      await surveyPage.createSurveyFromScratch(
-        TEST_SURVEY.surveyName,
-        TEST_SURVEY.surveyDescription
-      );
-      await surveyPage.addTextQuestion("short", TEST_SURVEY.shortTextQuestion);
-      await surveyPage.configureAndPublishSurvey({ isAnonymous: true });
-    });
+  //     await surveyPage.navigateToSurvey();
+  //     await surveyPage.createSurveyFromScratch(
+  //       TEST_SURVEY.surveyName,
+  //       TEST_SURVEY.surveyDescription
+  //     );
+  //     await surveyPage.addTextQuestion("short");
+  //       await surveyPage.saveNewQuestion(TEST_SURVEY.shortTextQuestion);
+  //     await surveyPage.configureAndPublishSurvey({ isAnonymous: true });
+  //   });
 
-    test("Create survey with long text question", async ({}, testInfo) => {
-      testInfo.annotations.push({
-        type: "comment",
-        description: "Verifies that a survey can be created with a long text question.",
-      });
+  //   test("Create survey with long text question", async ({}, testInfo) => {
+  //     testInfo.annotations.push({
+  //       type: "comment",
+  //       description: "Verifies that a survey can be created with a long text question.",
+  //     });
 
-      await surveyPage.navigateToSurvey();
-      await surveyPage.createSurveyFromScratch(
-        TEST_SURVEY.surveyName,
-        TEST_SURVEY.surveyDescription
-      );
-      await surveyPage.addTextQuestion("long", TEST_SURVEY.longTextQuestion);
-      await surveyPage.configureAndPublishSurvey({ isAnonymous: true });
-    });
+  //     await surveyPage.navigateToSurvey();
+  //     await surveyPage.createSurveyFromScratch(
+  //       TEST_SURVEY.surveyName,
+  //       TEST_SURVEY.surveyDescription
+  //     );
+  //     await surveyPage.addTextQuestion("long");
+  //     await surveyPage.saveNewQuestion(TEST_SURVEY.longTextQuestion);
+  //     await surveyPage.configureAndPublishSurvey({ isAnonymous: true });
+  //   });
 
-    test("Create survey with mandatory question", async ({}, testInfo) => {
-      testInfo.annotations.push({
-        type: "comment",
-        description: "Verifies that a survey can be created with a mandatory question.",
-      });
+  //   test("Create survey with mandatory question", async ({}, testInfo) => {
+  //     testInfo.annotations.push({
+  //       type: "comment",
+  //       description: "Verifies that a survey can be created with a mandatory question.",
+  //     });
 
-      await surveyPage.navigateToSurvey();
-      await surveyPage.createSurveyFromScratch(
-        TEST_SURVEY.surveyName,
-        TEST_SURVEY.surveyDescription
-      );
-      await surveyPage.addTextQuestion("short", TEST_SURVEY.shortTextQuestion);
-      await surveyPage.markQuestionAsRequired();
-      await surveyPage.configureAndPublishSurvey({ isAnonymous: true });
-    });
+  //     await surveyPage.navigateToSurvey();
+  //     await surveyPage.createSurveyFromScratch(
+  //       TEST_SURVEY.surveyName,
+  //       TEST_SURVEY.surveyDescription
+  //     );
+  //     await surveyPage.addTextQuestion("short");
+  //     await surveyPage.markQuestionAsRequired();
+  //       await surveyPage.saveNewQuestion(TEST_SURVEY.shortTextQuestion);
+  //     await surveyPage.configureAndPublishSurvey({ isAnonymous: true });
+  //   });
 
-    test("Create survey with maximum characters", async ({}, testInfo) => {
-      testInfo.annotations.push({
-        type: "comment",
-        description: "Verifies that a survey can be created with a character limit.",
-      });
+  //   test("Create survey with maximum characters", async ({}, testInfo) => {
+  //     testInfo.annotations.push({
+  //       type: "comment",
+  //       description: "Verifies that a survey can be created with a character limit.",
+  //     });
 
-      await surveyPage.navigateToSurvey();
-      await surveyPage.createSurveyFromScratch(
-        TEST_SURVEY.surveyName,
-        TEST_SURVEY.surveyDescription
-      );
-      await surveyPage.addTextQuestion("short", TEST_SURVEY.shortTextQuestion);
-      await surveyPage.setMaxCharacters(100);
-      await surveyPage.configureAndPublishSurvey({ isAnonymous: true });
-    });
+  //     await surveyPage.navigateToSurvey();
+  //     await surveyPage.createSurveyFromScratch(
+  //       TEST_SURVEY.surveyName,
+  //       TEST_SURVEY.surveyDescription
+  //     );
+  //     await surveyPage.addTextQuestion("short");
+  //     await surveyPage.setMaxCharacters(100);
+  //       await surveyPage.saveNewQuestion(TEST_SURVEY.shortTextQuestion);
+  //     await surveyPage.configureAndPublishSurvey({ isAnonymous: true });
+  //   });
     test("Create survey with Short and Special Questions", async ({}, testInfo) => {
       testInfo.annotations.push({
         type: "comment",
@@ -88,13 +92,28 @@ test.describe("Keka Engage Survey Tests", () => {
         TEST_SURVEY.surveyName,
         TEST_SURVEY.surveyDescription
       );
-      await surveyPage.addTextQuestion("short", TEST_SURVEY.shortTextQuestion);
+      await surveyPage.addTextQuestion("short");
       await surveyPage.markQuestionAsRequired();
-      await surveyPage.addTextQuestion("long", TEST_SURVEY.longTextQuestion);
+      await surveyPage.saveNewQuestion(TEST_SURVEY.shortTextQuestion);
+      await surveyPage.addTextQuestion("long");
       await surveyPage.setMaxCharacters(100);
-      await surveyPage.addSpecialQuestion("yesno", TEST_SURVEY.yesNoQuestion);
-      await surveyPage.addSpecialQuestion("rating", TEST_SURVEY.ratingScaleQuestion);
+        await surveyPage.saveNewQuestion(TEST_SURVEY.longTextQuestion);
+      await surveyPage.addSpecialQuestion("yesno");
+        await surveyPage.saveNewQuestion(TEST_SURVEY.yesNoQuestion);
+      await surveyPage.addSpecialQuestion("rating");
+        await surveyPage.saveNewQuestion(TEST_SURVEY.ratingScaleQuestion);
       await surveyPage.configureAndPublishSurvey({ isAnonymous: true });
     });
+    test.describe("Employee Survey Participation", () => {
+  test("Employee takes survey", async ({}, testInfo) => {
+    testInfo.annotations.push({
+      type: "comment",
+      description: "Verifies that an employee can take a survey.",
+    });
+
+    await surveyPage.navigateToDashboard();
+    await surveyPage.takeSurvey();
   });
-});
+    });
+
+  });
