@@ -2,6 +2,7 @@
 export const BASE_URL = 'https://login.kekastage.com/Account/Login?ReturnUrl=%2F';
 export const Dashboard_URL = 'https://aarthi.kekastage.com/#/home/dashboard';
 export const Anno_URL =  'https://aarthi.kekastage.com/#/engage/announcements/list';
+export const Survey_URL = 'https://aarthi.kekastage.com/#/engage/survey-revamp/survey-dashboard';
 export const Published_toaster = 'Success!Announcement published successfully.';
 export const Deleted_toaster = 'Success!Announcement deleted successfully.';
 export const Updated_toaster = 'Success!Announcement updated successfully.';  

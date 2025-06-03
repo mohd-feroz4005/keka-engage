@@ -12,8 +12,7 @@ import {
   Role_updated,
   Schedule_toaster,
 } from "../config/constants";
-import { TEST_ANNOUNCEMENT} from "../TestData/AnnouncementTestdata";
-
+import { TEST_ANNOUNCEMENT } from "../TestData/AnnouncementTestdata";
 
 export class AnnouncementPage extends BasePage {
   // Element Locators
@@ -43,7 +42,6 @@ export class AnnouncementPage extends BasePage {
   }
 
   async configureAndPublishForWall() {
-    
     await this.page.click(this.locators.configurePublishBtn);
     await this.selectTodayDate();
     await this.page.click(this.locators.publishBtn);
@@ -68,18 +66,20 @@ export class AnnouncementPage extends BasePage {
     tomorrow.setDate(tomorrow.getDate() + 3);
     const day = tomorrow.getDate();
     await this.page
-    .locator(`.bs-datepicker-container td:has-text("${day}")`)
-    .click();
+      .locator(`.bs-datepicker-container td:has-text("${day}")`)
+      .click();
     await this.page.click(this.locators.chooseEndDateField); // <-- Replace with actual locator
-await this.page.waitForSelector("bs-datepicker-container", { state: "visible" });
+    await this.page.waitForSelector("bs-datepicker-container", {
+      state: "visible",
+    });
 
-const closeDate = new Date();
-closeDate.setDate(closeDate.getDate() + 3);
-const closeDay = closeDate.getDate();
+    const closeDate = new Date();
+    closeDate.setDate(closeDate.getDate() + 3);
+    const closeDay = closeDate.getDate();
 
-await this.page
-  .locator(`.bs-datepicker-container td:has-text("${closeDay}")`)
-  .click();
+    await this.page
+      .locator(`.bs-datepicker-container td:has-text("${closeDay}")`)
+      .click();
   }
 
   private async verifyToastMessage(expectedText: string) {
@@ -155,15 +155,17 @@ await this.page
     await this.page.click(this.locators.selectGroups);
     await this.page.click(this.locators.includeAllEmployeesCheckbox);
     await this.page.click(this.locators.publishLater);
-    await this.page.click(this.locators.chooseEndDateField)
+    await this.page.click(this.locators.chooseEndDateField);
     const futureDate = new Date();
     futureDate.setDate(futureDate.getDate() + 3);
     const futureDay = futureDate.getDate();
-    await this.page.locator(`.bs-datepicker-container td:has-text("${futureDay}")`).click();
+    await this.page
+      .locator(`.bs-datepicker-container td:has-text("${futureDay}")`)
+      .click();
     await this.page.click(this.locators.publishBtn);
     await this.verifyToastMessage(Schedule_toaster);
   }
-  
+
   async createAnnouncementwithpublishlater(title: string, description: string) {
     await this.page.click(this.locators.newAnnouncementBtn);
     await this.fillAnnouncementDetails(title, description);
@@ -174,7 +176,6 @@ await this.page
     await this.page.click(this.locators.publishBtn);
     await this.verifyToastMessage(Schedule_toaster);
     //await this.selectFutureDate();
-  
   }
 
   async acknowledgeAnnouncement() {
@@ -202,34 +203,45 @@ await this.page
 
   async CreateAnnoucementwithattachment() {
     await this.page.click(this.locators.newAnnouncementBtn);
-    await this.fillAnnouncementDetails(TEST_ANNOUNCEMENT.title, TEST_ANNOUNCEMENT.description);
+    await this.fillAnnouncementDetails(
+      TEST_ANNOUNCEMENT.title,
+      TEST_ANNOUNCEMENT.description
+    );
     await this.page.click(this.locators.addAttachmentBtn);
-    
+
     // Ensure the file input field is correctly targeted
     const fileInput = this.page.locator(this.locators.addAttachmentBtn);
     await fileInput.setInputFiles("C:\\Users\\mohammed.feroz\\Desktop\\images");
-    
+
     await this.configureAndPublish();
-    
   }
- 
+
   async CreateAnnouncementwithpixelimage() {
     await this.page.click(this.locators.newAnnouncementBtn);
-    await this.fillAnnouncementDetails(TEST_ANNOUNCEMENT.title, TEST_ANNOUNCEMENT.description);
-    await this.page.getByText('Get from Pexels').click();
-    await this.page.locator('div.modal-content img.border-radius-4.object-fit-cover').first().click();
-    await this.page.click('text=Save image');
+    await this.fillAnnouncementDetails(
+      TEST_ANNOUNCEMENT.title,
+      TEST_ANNOUNCEMENT.description
+    );
+    await this.page.getByText("Get from Pexels").click();
+    await this.page
+      .locator("div.modal-content img.border-radius-4.object-fit-cover")
+      .first()
+      .click();
+    await this.page.click("text=Save image");
     await this.configureAndPublish();
     await this.verifyToastMessage(Published_toaster);
-}
- async createAnnouncementfromwall() {
-  await this.page.locator('span.ki-add').click();
-  await this.fillAnnouncementDetails(TEST_ANNOUNCEMENT.title, TEST_ANNOUNCEMENT.description);
-  await this.configureAndPublishForWall();
- }
+  }
+  async createAnnouncementfromwall() {
+    await this.page.locator("span.ki-add").click();
+    await this.fillAnnouncementDetails(
+      TEST_ANNOUNCEMENT.title,
+      TEST_ANNOUNCEMENT.description
+    );
+    await this.configureAndPublishForWall();
+  }
 
- async saveAnnouncementsettings() {
-  await this.page.getByText('Save Settings').click();
-  await this.verifyToastMessage("Success!Settings saved successfully.");
-}
+  async saveAnnouncementsettings() {
+    await this.page.getByText("Save Settings").click();
+    await this.verifyToastMessage("Success!Settings saved successfully.");
+  }
 }

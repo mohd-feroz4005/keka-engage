@@ -74,137 +74,185 @@
       "specs": [],
       "suites": [
         {
-          "title": "Positive Test Cases",
+          "title": "Keka Engage Survey Tests",
           "file": "Survey.spec.ts",
-          "line": 19,
-          "column": 10,
-          "specs": [
+          "line": 9,
+          "column": 6,
+          "specs": [],
+          "suites": [
             {
-              "title": "Create survey from scratch",
-              "ok": false,
-              "tags": [],
-              "tests": [
+              "title": "Positive Test Cases",
+              "file": "Survey.spec.ts",
+              "line": 18,
+              "column": 8,
+              "specs": [
                 {
-                  "timeout": 90000,
-                  "annotations": [
+                  "title": "Create survey with Short and Special Questions",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
                     {
-                      "type": "comment",
-                      "description": "Verifies that a survey can be created from scratch."
-                    }
-                  ],
-                  "expectedStatus": "passed",
-                  "projectId": "Chromium",
-                  "projectName": "Chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "status": "failed",
-                      "duration": 6,
-                      "error": {
-                        "message": "TypeError: Cannot read properties of undefined (reading 'navigateToSurvey')",
-                        "stack": "TypeError: Cannot read properties of undefined (reading 'navigateToSurvey')\n    at C:\\keka-engage\\Keka-engage\\tests\\Survey.spec.ts:22:30",
-                        "location": {
-                          "file": "C:\\keka-engage\\Keka-engage\\tests\\Survey.spec.ts",
-                          "column": 30,
-                          "line": 22
-                        },
-                        "snippet": "\u001b[0m \u001b[90m 20 |\u001b[39m             testInfo\u001b[33m.\u001b[39mannotations\u001b[33m.\u001b[39mpush({ type\u001b[33m:\u001b[39m \u001b[32m\"comment\"\u001b[39m\u001b[33m,\u001b[39m description\u001b[33m:\u001b[39m \u001b[32m\"Verifies that a survey can be created from scratch.\"\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 21 |\u001b[39m             \u001b[36mawait\u001b[39m surveyPage\u001b[33m.\u001b[39mnavigateToSurvey()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m             \u001b[36mawait\u001b[39m surveyPage\u001b[33m.\u001b[39mcreateSurveyFromScratch(\u001b[33mTEST_SURVEY\u001b[39m\u001b[33m.\u001b[39msurveyName\u001b[33m,\u001b[39m \u001b[33mTEST_SURVEY\u001b[39m\u001b[33m.\u001b[39msurveyDescription)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m             \u001b[36mawait\u001b[39m surveyPage\u001b[33m.\u001b[39maddShortTextQuestion(\u001b[33mTEST_SURVEY\u001b[39m\u001b[33m.\u001b[39mshortTextQuestion)\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m             \u001b[36mawait\u001b[39m surveyPage\u001b[33m.\u001b[39mconfigureAndPublishSurvey()\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
+                      "timeout": 90000,
+                      "annotations": [
                         {
-                          "location": {
-                            "file": "C:\\keka-engage\\Keka-engage\\tests\\Survey.spec.ts",
-                            "column": 30,
-                            "line": 22
-                          },
-                          "message": "TypeError: Cannot read properties of undefined (reading 'navigateToSurvey')\n\n\u001b[0m \u001b[90m 20 |\u001b[39m             testInfo\u001b[33m.\u001b[39mannotations\u001b[33m.\u001b[39mpush({ type\u001b[33m:\u001b[39m \u001b[32m\"comment\"\u001b[39m\u001b[33m,\u001b[39m description\u001b[33m:\u001b[39m \u001b[32m\"Verifies that a survey can be created from scratch.\"\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 21 |\u001b[39m             \u001b[36mawait\u001b[39m surveyPage\u001b[33m.\u001b[39mnavigateToSurvey()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m             \u001b[36mawait\u001b[39m surveyPage\u001b[33m.\u001b[39mcreateSurveyFromScratch(\u001b[33mTEST_SURVEY\u001b[39m\u001b[33m.\u001b[39msurveyName\u001b[33m,\u001b[39m \u001b[33mTEST_SURVEY\u001b[39m\u001b[33m.\u001b[39msurveyDescription)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m             \u001b[36mawait\u001b[39m surveyPage\u001b[33m.\u001b[39maddShortTextQuestion(\u001b[33mTEST_SURVEY\u001b[39m\u001b[33m.\u001b[39mshortTextQuestion)\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m             \u001b[36mawait\u001b[39m surveyPage\u001b[33m.\u001b[39mconfigureAndPublishSurvey()\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\keka-engage\\Keka-engage\\tests\\Survey.spec.ts:22:30\u001b[22m"
-                        },
-                        {
-                          "message": "Error: ENOENT: no such file or directory, open 'C:\\keka-engage\\test-results\\.playwright-artifacts-0\\5fde969ed65434b0e101e650b733da98.zip'"
-                        },
-                        {
-                          "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
+                          "type": "comment",
+                          "description": "Verifies that a survey can be created with short and special questions."
                         }
                       ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-05-26T17:56:51.449Z",
-                      "attachments": [],
-                      "errorLocation": {
-                        "file": "C:\\keka-engage\\Keka-engage\\tests\\Survey.spec.ts",
-                        "column": 30,
-                        "line": 22
-                      }
+                      "expectedStatus": "passed",
+                      "projectId": "Chromium",
+                      "projectName": "Chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "status": "failed",
+                          "duration": 13439,
+                          "error": {
+                            "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('//div[@id=\\'toast-container\\']/xhr-toastr[contains(@class, \\'ngx-toastr\\')]//div[contains(@class, \\'message\\')]')\nExpected string: \u001b[32m\"\u001b[7mSuccess!\u001b[27mSurvey creation initiated successfully\"\u001b[39m\nReceived string: \u001b[31m\"Survey creation initiated successfully\"\u001b[39m\nCall log:\n\u001b[2m  - expect.toContainText with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//div[@id=\\'toast-container\\']/xhr-toastr[contains(@class, \\'ngx-toastr\\')]//div[contains(@class, \\'message\\')]')\u001b[22m\n\u001b[2m    9 × locator resolved to <div class=\"message ng-tns-c133-2\">Survey creation initiated successfully</div>\u001b[22m\n\u001b[2m      - unexpected value \"Survey creation initiated successfully\"\u001b[22m\n",
+                            "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('//div[@id=\\'toast-container\\']/xhr-toastr[contains(@class, \\'ngx-toastr\\')]//div[contains(@class, \\'message\\')]')\nExpected string: \u001b[32m\"\u001b[7mSuccess!\u001b[27mSurvey creation initiated successfully\"\u001b[39m\nReceived string: \u001b[31m\"Survey creation initiated successfully\"\u001b[39m\nCall log:\n\u001b[2m  - expect.toContainText with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//div[@id=\\'toast-container\\']/xhr-toastr[contains(@class, \\'ngx-toastr\\')]//div[contains(@class, \\'message\\')]')\u001b[22m\n\u001b[2m    9 × locator resolved to <div class=\"message ng-tns-c133-2\">Survey creation initiated successfully</div>\u001b[22m\n\u001b[2m      - unexpected value \"Survey creation initiated successfully\"\u001b[22m\n\n    at SurveyPage.verifyToastMessage (C:\\keka-engage\\Keka-engage\\pages\\surveyPage.ts:126:27)\n    at SurveyPage.createSurveyFromScratch (C:\\keka-engage\\Keka-engage\\pages\\surveyPage.ts:37:9)\n    at C:\\keka-engage\\Keka-engage\\tests\\Survey.spec.ts:87:7",
+                            "matcherResult": {
+                              "name": "toContainText",
+                              "expected": "Success!Survey creation initiated successfully",
+                              "message": "\u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('//div[@id=\\'toast-container\\']/xhr-toastr[contains(@class, \\'ngx-toastr\\')]//div[contains(@class, \\'message\\')]')\nExpected string: \u001b[32m\"\u001b[7mSuccess!\u001b[27mSurvey creation initiated successfully\"\u001b[39m\nReceived string: \u001b[31m\"Survey creation initiated successfully\"\u001b[39m\nCall log:\n\u001b[2m  - expect.toContainText with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//div[@id=\\'toast-container\\']/xhr-toastr[contains(@class, \\'ngx-toastr\\')]//div[contains(@class, \\'message\\')]')\u001b[22m\n\u001b[2m    9 × locator resolved to <div class=\"message ng-tns-c133-2\">Survey creation initiated successfully</div>\u001b[22m\n\u001b[2m      - unexpected value \"Survey creation initiated successfully\"\u001b[22m\n",
+                              "pass": false,
+                              "actual": "Survey creation initiated successfully",
+                              "log": [
+                                "  - expect.toContainText with timeout 5000ms",
+                                "  - waiting for locator('//div[@id=\\'toast-container\\']/xhr-toastr[contains(@class, \\'ngx-toastr\\')]//div[contains(@class, \\'message\\')]')",
+                                "    9 × locator resolved to <div class=\"message ng-tns-c133-2\">Survey creation initiated successfully</div>",
+                                "      - unexpected value \"Survey creation initiated successfully\""
+                              ],
+                              "timeout": 5000
+                            },
+                            "location": {
+                              "file": "C:\\keka-engage\\Keka-engage\\pages\\surveyPage.ts",
+                              "column": 27,
+                              "line": 126
+                            },
+                            "snippet": "\u001b[90m   at \u001b[39m..\\pages\\surveyPage.ts:126\n\n\u001b[0m \u001b[90m 124 |\u001b[39m\n \u001b[90m 125 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m\"Verifying toast text...\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 126 |\u001b[39m   \u001b[36mawait\u001b[39m expect(toastText)\u001b[33m.\u001b[39mtoContainText(expectedText)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 127 |\u001b[39m\n \u001b[90m 128 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m\"Waiting for toast to disappear...\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 129 |\u001b[39m   \u001b[36mawait\u001b[39m toast\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m\"detached\"\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m5000\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "C:\\keka-engage\\Keka-engage\\pages\\surveyPage.ts",
+                                "column": 27,
+                                "line": 126
+                              },
+                              "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('//div[@id=\\'toast-container\\']/xhr-toastr[contains(@class, \\'ngx-toastr\\')]//div[contains(@class, \\'message\\')]')\nExpected string: \u001b[32m\"\u001b[7mSuccess!\u001b[27mSurvey creation initiated successfully\"\u001b[39m\nReceived string: \u001b[31m\"Survey creation initiated successfully\"\u001b[39m\nCall log:\n\u001b[2m  - expect.toContainText with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//div[@id=\\'toast-container\\']/xhr-toastr[contains(@class, \\'ngx-toastr\\')]//div[contains(@class, \\'message\\')]')\u001b[22m\n\u001b[2m    9 × locator resolved to <div class=\"message ng-tns-c133-2\">Survey creation initiated successfully</div>\u001b[22m\n\u001b[2m      - unexpected value \"Survey creation initiated successfully\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\pages\\surveyPage.ts:126\n\n\u001b[0m \u001b[90m 124 |\u001b[39m\n \u001b[90m 125 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m\"Verifying toast text...\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 126 |\u001b[39m   \u001b[36mawait\u001b[39m expect(toastText)\u001b[33m.\u001b[39mtoContainText(expectedText)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 127 |\u001b[39m\n \u001b[90m 128 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m\"Waiting for toast to disappear...\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 129 |\u001b[39m   \u001b[36mawait\u001b[39m toast\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m\"detached\"\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m5000\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at SurveyPage.verifyToastMessage (C:\\keka-engage\\Keka-engage\\pages\\surveyPage.ts:126:27)\u001b[22m\n\u001b[2m    at SurveyPage.createSurveyFromScratch (C:\\keka-engage\\Keka-engage\\pages\\surveyPage.ts:37:9)\u001b[22m\n\u001b[2m    at C:\\keka-engage\\Keka-engage\\tests\\Survey.spec.ts:87:7\u001b[22m"
+                            }
+                          ],
+                          "stdout": [
+                            {
+                              "text": "Creating a new survey...\n"
+                            },
+                            {
+                              "text": "Waiting for toast to appear...\n"
+                            },
+                            {
+                              "text": "Verifying toast text...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-27T10:13:16.251Z",
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "C:\\keka-engage\\test-results\\Survey-Keka-Engage-Survey--53274-Short-and-Special-Questions-Chromium\\test-failed-1.png"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "C:\\keka-engage\\test-results\\Survey-Keka-Engage-Survey--53274-Short-and-Special-Questions-Chromium\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "C:\\keka-engage\\Keka-engage\\pages\\surveyPage.ts",
+                            "column": 27,
+                            "line": 126
+                          }
+                        },
+                        {
+                          "workerIndex": 1,
+                          "status": "failed",
+                          "duration": 13097,
+                          "error": {
+                            "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('//div[@id=\\'toast-container\\']/xhr-toastr[contains(@class, \\'ngx-toastr\\')]//div[contains(@class, \\'message\\')]')\nExpected string: \u001b[32m\"Success!Survey creation initiated successfully\"\u001b[39m\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toContainText with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//div[@id=\\'toast-container\\']/xhr-toastr[contains(@class, \\'ngx-toastr\\')]//div[contains(@class, \\'message\\')]')\u001b[22m\n\u001b[2m    8 × locator resolved to <div class=\"message ng-tns-c133-2\">Survey creation initiated successfully</div>\u001b[22m\n\u001b[2m      - unexpected value \"Survey creation initiated successfully\"\u001b[22m\n",
+                            "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('//div[@id=\\'toast-container\\']/xhr-toastr[contains(@class, \\'ngx-toastr\\')]//div[contains(@class, \\'message\\')]')\nExpected string: \u001b[32m\"Success!Survey creation initiated successfully\"\u001b[39m\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toContainText with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//div[@id=\\'toast-container\\']/xhr-toastr[contains(@class, \\'ngx-toastr\\')]//div[contains(@class, \\'message\\')]')\u001b[22m\n\u001b[2m    8 × locator resolved to <div class=\"message ng-tns-c133-2\">Survey creation initiated successfully</div>\u001b[22m\n\u001b[2m      - unexpected value \"Survey creation initiated successfully\"\u001b[22m\n\n    at SurveyPage.verifyToastMessage (C:\\keka-engage\\Keka-engage\\pages\\surveyPage.ts:126:27)\n    at SurveyPage.createSurveyFromScratch (C:\\keka-engage\\Keka-engage\\pages\\surveyPage.ts:37:9)\n    at C:\\keka-engage\\Keka-engage\\tests\\Survey.spec.ts:87:7",
+                            "matcherResult": {
+                              "name": "toContainText",
+                              "expected": "Success!Survey creation initiated successfully",
+                              "message": "\u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('//div[@id=\\'toast-container\\']/xhr-toastr[contains(@class, \\'ngx-toastr\\')]//div[contains(@class, \\'message\\')]')\nExpected string: \u001b[32m\"Success!Survey creation initiated successfully\"\u001b[39m\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toContainText with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//div[@id=\\'toast-container\\']/xhr-toastr[contains(@class, \\'ngx-toastr\\')]//div[contains(@class, \\'message\\')]')\u001b[22m\n\u001b[2m    8 × locator resolved to <div class=\"message ng-tns-c133-2\">Survey creation initiated successfully</div>\u001b[22m\n\u001b[2m      - unexpected value \"Survey creation initiated successfully\"\u001b[22m\n",
+                              "pass": false,
+                              "actual": "<element(s) not found>",
+                              "log": [
+                                "  - expect.toContainText with timeout 5000ms",
+                                "  - waiting for locator('//div[@id=\\'toast-container\\']/xhr-toastr[contains(@class, \\'ngx-toastr\\')]//div[contains(@class, \\'message\\')]')",
+                                "    8 × locator resolved to <div class=\"message ng-tns-c133-2\">Survey creation initiated successfully</div>",
+                                "      - unexpected value \"Survey creation initiated successfully\""
+                              ],
+                              "timeout": 5000
+                            },
+                            "location": {
+                              "file": "C:\\keka-engage\\Keka-engage\\pages\\surveyPage.ts",
+                              "column": 27,
+                              "line": 126
+                            },
+                            "snippet": "\u001b[90m   at \u001b[39m..\\pages\\surveyPage.ts:126\n\n\u001b[0m \u001b[90m 124 |\u001b[39m\n \u001b[90m 125 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m\"Verifying toast text...\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 126 |\u001b[39m   \u001b[36mawait\u001b[39m expect(toastText)\u001b[33m.\u001b[39mtoContainText(expectedText)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 127 |\u001b[39m\n \u001b[90m 128 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m\"Waiting for toast to disappear...\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 129 |\u001b[39m   \u001b[36mawait\u001b[39m toast\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m\"detached\"\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m5000\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "C:\\keka-engage\\Keka-engage\\pages\\surveyPage.ts",
+                                "column": 27,
+                                "line": 126
+                              },
+                              "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('//div[@id=\\'toast-container\\']/xhr-toastr[contains(@class, \\'ngx-toastr\\')]//div[contains(@class, \\'message\\')]')\nExpected string: \u001b[32m\"Success!Survey creation initiated successfully\"\u001b[39m\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toContainText with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//div[@id=\\'toast-container\\']/xhr-toastr[contains(@class, \\'ngx-toastr\\')]//div[contains(@class, \\'message\\')]')\u001b[22m\n\u001b[2m    8 × locator resolved to <div class=\"message ng-tns-c133-2\">Survey creation initiated successfully</div>\u001b[22m\n\u001b[2m      - unexpected value \"Survey creation initiated successfully\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\pages\\surveyPage.ts:126\n\n\u001b[0m \u001b[90m 124 |\u001b[39m\n \u001b[90m 125 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m\"Verifying toast text...\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 126 |\u001b[39m   \u001b[36mawait\u001b[39m expect(toastText)\u001b[33m.\u001b[39mtoContainText(expectedText)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 127 |\u001b[39m\n \u001b[90m 128 |\u001b[39m   console\u001b[33m.\u001b[39mlog(\u001b[32m\"Waiting for toast to disappear...\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 129 |\u001b[39m   \u001b[36mawait\u001b[39m toast\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m\"detached\"\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m5000\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at SurveyPage.verifyToastMessage (C:\\keka-engage\\Keka-engage\\pages\\surveyPage.ts:126:27)\u001b[22m\n\u001b[2m    at SurveyPage.createSurveyFromScratch (C:\\keka-engage\\Keka-engage\\pages\\surveyPage.ts:37:9)\u001b[22m\n\u001b[2m    at C:\\keka-engage\\Keka-engage\\tests\\Survey.spec.ts:87:7\u001b[22m"
+                            }
+                          ],
+                          "stdout": [
+                            {
+                              "text": "Creating a new survey...\n"
+                            },
+                            {
+                              "text": "Waiting for toast to appear...\n"
+                            },
+                            {
+                              "text": "Verifying toast text...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 1,
+                          "startTime": "2025-05-27T10:13:31.581Z",
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "C:\\keka-engage\\test-results\\Survey-Keka-Engage-Survey--53274-Short-and-Special-Questions-Chromium-retry1\\test-failed-1.png"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "C:\\keka-engage\\test-results\\Survey-Keka-Engage-Survey--53274-Short-and-Special-Questions-Chromium-retry1\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "C:\\keka-engage\\Keka-engage\\pages\\surveyPage.ts",
+                            "column": 27,
+                            "line": 126
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
                     }
                   ],
-                  "status": "unexpected"
+                  "id": "4d3d75d44e6cfbf3df2b-f502fcc6c9e632b48264",
+                  "file": "Survey.spec.ts",
+                  "line": 80,
+                  "column": 9
                 }
-              ],
-              "id": "4d3d75d44e6cfbf3df2b-0fc6ad37ed125470b301",
-              "file": "Survey.spec.ts",
-              "line": 20,
-              "column": 13
-            },
-            {
-              "title": "Create Survey with long question",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "Chromium",
-                  "projectName": "Chromium",
-                  "results": [],
-                  "status": "skipped"
-                }
-              ],
-              "id": "4d3d75d44e6cfbf3df2b-821ceba6aabf4921ff86",
-              "file": "Survey.spec.ts",
-              "line": 29,
-              "column": 13
-            },
-            {
-              "title": "Create Survey with mandatory question",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "Chromium",
-                  "projectName": "Chromium",
-                  "results": [],
-                  "status": "skipped"
-                }
-              ],
-              "id": "4d3d75d44e6cfbf3df2b-cbfd45ce2a8fc96a66df",
-              "file": "Survey.spec.ts",
-              "line": 38,
-              "column": 13
-            },
-            {
-              "title": "Create Survey with maximum characters",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "Chromium",
-                  "projectName": "Chromium",
-                  "results": [],
-                  "status": "skipped"
-                }
-              ],
-              "id": "4d3d75d44e6cfbf3df2b-7b5e8e102244660883f5",
-              "file": "Survey.spec.ts",
-              "line": 47,
-              "column": 9
+              ]
             }
           ]
         }
@@ -213,10 +261,10 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-05-26T17:56:50.523Z",
-    "duration": 90972.232,
+    "startTime": "2025-05-27T10:13:15.183Z",
+    "duration": 30544.448,
     "expected": 0,
-    "skipped": 3,
+    "skipped": 0,
     "unexpected": 1,
     "flaky": 0
   }
