@@ -131,6 +131,7 @@ export class SurveyPage extends BasePage {
         const toast = this.page.locator(this.locators.ToastMessage);
         await expect(toast).toBeVisible();
         await expect(toast).toHaveText(expectedText);
+        console.log(`Toast message verified: ${expectedText}`);
         //await this.page.waitForTimeout(5000); // Wait for toast to disappear
     }
     async takeSurvey() {
@@ -155,12 +156,14 @@ export class SurveyPage extends BasePage {
         await this.waitAndClick(this.locators.YesAnswerButton); // Assuming a Yes/No question
         await this.waitAndClick(this.locators.ContinueSurveyButton);
         await this.waitAndClick(this.locators.RatingScaleStar); // Assuming a rating scale question
-        // await this.waitAndClick(this.locators.ContinueSurveyButton);
+        await this.page.waitForTimeout(2000); // Wait for rating to be selected
         await this.waitAndClick(this.locators.SurveySubmitButton);
         await this.waitAndClick(this.locators.BackToKekaWallButton);
         console.log("Survey submitted successfully.");
-        //await this.verifyToastMessage(Survey_Submitted);
-        await this.page.context().close();
+        await this.verifyToastMessage(Survey_Submitted);
+        await this.page.waitForTimeout(1000);
+        await this.page.close();
+
  
     }
     async CreateSurveyFromTemplate(templateTitle: string) {
@@ -177,4 +180,25 @@ export class SurveyPage extends BasePage {
     await this.waitAndClick(this.locators.SurveyCreateButton);
     console.log(`Selected survey template: ${templateTitle}`);
 }
+    async exitSurvey() {
+        console.log("Exiting survey...");
+        await this.waitAndClick(this.locators.ExitSurveyCloseButton);
+        await this.waitAndClick(this.locators.FinishLaterButton);
+        console.log("Survey exited successfully.");
+        //await this.verifyToastMessage(Survey_published);
+    }
+
+    async resumeTakeSurvey() {
+        if (!this.surveyName) {
+            throw new Error("Survey name is not set. Please create or set the survey name before resuming the survey.");
+        }
+        console.log(`Resuming the survey: ${this.surveyName}...`);
+        const resumeButton = this.page.locator(this.locators.ResumeTakeSurveyButton(this.surveyName));
+        await resumeButton.waitFor({ state: "visible", timeout: 5000 });
+        await resumeButton.click();
+         await this.waitAndClick(this.locators.ContinueSurveyButton);
+        await this.waitAndFill(this.locators.QuestionAnsInputField, "My answer");
+        await this.waitAndClick(this.locators.SurveySubmitButton);
+        console.log("Survey resumed and submitted successfully.");
+    }
 }

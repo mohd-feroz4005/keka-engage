@@ -14,7 +14,7 @@ test.describe("Keka Engage Survey Tests", () => {
 
     await loginPage.navigateToLogin();
     await loginPage.loginAsAdmin();
-  });
+    });
 
   // test.describe("Positive Test Cases", () => {
   test("Create survey from scratch", async ({}, testInfo) => {
@@ -115,7 +115,7 @@ test.describe("Keka Engage Survey Tests", () => {
         description: "Verifies that an employee can take a survey.",
       });
 
-      await surveyPage.navigateToDashboard();
+      await surveyPage.navigateToSurvey();
       await surveyPage.createSurveyFromScratch(
         TEST_SURVEY.surveyName,
         TEST_SURVEY.surveyDescription
@@ -131,7 +131,31 @@ test.describe("Keka Engage Survey Tests", () => {
       await surveyPage.addSpecialQuestion("rating");
       await surveyPage.saveNewQuestion(TEST_SURVEY.ratingScaleQuestion);
       await surveyPage.configureAndPublishSurvey({ isAnonymous: true });
+      await surveyPage.navigateToDashboard();
       await surveyPage.takeSurvey();
+      testInfo.setTimeout(5 * 60 * 1000); // Set timeout to 5 minutes (300 seconds)
     });
   });
-});
+  test.describe("Survey Exit and Resume", () => {
+    test("Verify user can able to exit and resume survey", async ({}, testInfo) => {
+      testInfo.annotations.push({
+        type: "comment",
+        description: "Verifies that a user can exit and resume a survey.",
+      });
+
+      await surveyPage.navigateToSurvey();
+      await surveyPage.createSurveyFromScratch(
+        TEST_SURVEY.surveyName,
+        TEST_SURVEY.surveyDescription
+      );
+      await surveyPage.addTextQuestion("short");
+      await surveyPage.saveNewQuestion(TEST_SURVEY.shortTextQuestion);
+      await surveyPage.configureAndPublishSurvey({ isAnonymous: true });
+      await surveyPage.navigateToDashboard();
+      await surveyPage.takeSurvey();
+      await surveyPage.exitSurvey();
+      await surveyPage.resumeTakeSurvey();
+        //testInfo.setTimeout(5 * 60 * 1000); // Set timeout to 5 minutes (300 seconds)
+      });
+    });
+  });

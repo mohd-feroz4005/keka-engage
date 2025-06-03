@@ -39,8 +39,10 @@ export const surveyLocators = {
     RatingScaleStar: "(//span[contains(@class, 'ki-star') and contains(@class, 'cursor-pointer')])[3]",
     SurveySubmitButton: "//button[text()='Submit']",
     BackToKekaWallButton: "//button[text()='Back to Keka Wall']",
-    SelectSurveyTemplate: (cardTitle: string) => `//p[text()='${cardTitle}']/ancestor::div[contains(@class,'card')]//span[text()='Use this Template']`
-
+    SelectSurveyTemplate: (cardTitle: string) => `//p[text()='${cardTitle}']/ancestor::div[contains(@class,'card')]//span[text()='Use this Template']`,
+    ExitSurveyCloseButton: "//span[contains(@class, 'ki-close') and contains(@class, 'cursor-pointer')]",
+    FinishLaterButton: "//button[contains(text(), 'Finish')][1]",
+    ResumeTakeSurveyButton: (surveyName: string) => `xpath=//p[@title="${surveyName}"]/ancestor::div[contains(@class, 'card-body')]//button[contains(text(), 'Resume Survey')]`,
     
 
 
