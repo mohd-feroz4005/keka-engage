@@ -1,18 +1,9 @@
 import { PlaywrightTestConfig } from '@playwright/test';
-import * as fs from 'fs';
-import * as path from 'path';
 
-const resultsDir = path.join(__dirname, 'test-results');
-if (fs.existsSync(resultsDir)) {
-  fs.rmSync(resultsDir, { recursive: true, force: true });
-  console.log('test-results folder was removed.');
-}
-
-const isCI = !!process.env.CI;
 const config: PlaywrightTestConfig = {
   testDir: 'Keka-engage/tests',
-  timeout: isCI ? 180000 : 180000, // 3 min for CI, 100s for local
-  retries: 1,
+  timeout: 180000,
+  retries: 0,
   use: {
     headless: true,
     viewport: { width: 1280, height: 720 },
@@ -21,17 +12,11 @@ const config: PlaywrightTestConfig = {
   },
   projects: [
     { name: 'Chromium', use: { browserName: 'chromium' } }
-    // { name: 'Firefox', use: { browserName: 'firefox' } },
-    // { name: 'WebKit', use: { browserName: 'webkit' } }
   ],
   reporter: [
-    ['list'],  // Good for console readability
-    ['dot'],  // Shows progress with dots (useful for large test suites)
-    ['json', { outputFile: 'test-results.json' }], // JSON report
-    //['allure-playwright', { outputFolder: 'playwright-report', open: 'always'}], // Allure report
-    ['html', { outputFolder: 'playwright-report', open: 'always' }], // HTML report
-  
-    //['junit', { outputFile: 'results.xml' }] // JUnit report (for CI/CD)
+    ['list'],
+    ['json', { outputFile: 'test-results.json' }],
+    ['html', { outputFolder: 'playwright-report', open: 'always' }]
   ]
 };
 

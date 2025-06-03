@@ -20,10 +20,6 @@
         null
       ],
       [
-        "dot",
-        null
-      ],
-      [
         "json",
         {
           "outputFile": "test-results.json"
@@ -46,7 +42,7 @@
       {
         "outputDir": "C:/keka-engage/test-results",
         "repeatEach": 1,
-        "retries": 1,
+        "retries": 0,
         "metadata": {},
         "id": "Chromium",
         "name": "Chromium",
@@ -78,53 +74,95 @@
           "file": "Survey.spec.ts",
           "line": 10,
           "column": 6,
-          "specs": [
+          "specs": [],
+          "suites": [
             {
-              "title": "Create survey with Survey Template",
-              "ok": true,
-              "tags": [],
-              "tests": [
+              "title": "Survey Exit and Resume",
+              "file": "Survey.spec.ts",
+              "line": 139,
+              "column": 8,
+              "specs": [
                 {
-                  "timeout": 180000,
-                  "annotations": [
+                  "title": "Verify user can able to exit and resume survey",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
                     {
-                      "type": "comment",
-                      "description": "Verifies that a survey can be created using a template."
-                    }
-                  ],
-                  "expectedStatus": "passed",
-                  "projectId": "Chromium",
-                  "projectName": "Chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "status": "passed",
-                      "duration": 92825,
-                      "errors": [],
-                      "stdout": [
+                      "timeout": 180000,
+                      "annotations": [
                         {
-                          "text": "Creating survey from template: Team Performance Survey...\n"
-                        },
-                        {
-                          "text": "Selected survey template: Team Performance Survey\n"
-                        },
-                        {
-                          "text": "Configuring and publishing survey...\n"
+                          "type": "comment",
+                          "description": "Verifies that a user can exit and resume a survey."
                         }
                       ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-05-29T12:56:30.989Z",
-                      "attachments": []
+                      "expectedStatus": "passed",
+                      "projectId": "Chromium",
+                      "projectName": "Chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "status": "failed",
+                          "duration": 93394,
+                          "error": {
+                            "message": "Error: page.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('//button [text() = \\'Configure and Publish\\']')\u001b[22m\n\u001b[2m    - locator resolved to <button disabled class=\"btn btn-primary\">Configure and Publish</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not enabled\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not enabled\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    58 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not enabled\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n",
+                            "stack": "Error: page.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('//button [text() = \\'Configure and Publish\\']')\u001b[22m\n\u001b[2m    - locator resolved to <button disabled class=\"btn btn-primary\">Configure and Publish</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not enabled\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not enabled\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    58 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not enabled\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n    at SurveyPage.waitAndClick (C:\\keka-engage\\Keka-engage\\pages\\surveyPage.ts:22:25)\n    at SurveyPage.configureAndPublishSurvey (C:\\keka-engage\\Keka-engage\\pages\\surveyPage.ts:113:9)\n    at C:\\keka-engage\\Keka-engage\\tests\\Survey.spec.ts:152:7",
+                            "location": {
+                              "file": "C:\\keka-engage\\Keka-engage\\pages\\surveyPage.ts",
+                              "column": 25,
+                              "line": 22
+                            },
+                            "snippet": "\u001b[90m   at \u001b[39m..\\pages\\surveyPage.ts:22\n\n\u001b[0m \u001b[90m 20 |\u001b[39m     \u001b[36mprivate\u001b[39m \u001b[36masync\u001b[39m waitAndClick(selector\u001b[33m:\u001b[39m string) {\n \u001b[90m 21 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(selector\u001b[33m,\u001b[39m { state\u001b[33m:\u001b[39m \u001b[32m\"visible\"\u001b[39m })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mclick(selector)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m     }\n \u001b[90m 24 |\u001b[39m\n \u001b[90m 25 |\u001b[39m     \u001b[36mprivate\u001b[39m \u001b[36masync\u001b[39m waitAndFill(selector\u001b[33m:\u001b[39m string\u001b[33m,\u001b[39m value\u001b[33m:\u001b[39m string) {\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "C:\\keka-engage\\Keka-engage\\pages\\surveyPage.ts",
+                                "column": 25,
+                                "line": 22
+                              },
+                              "message": "Error: page.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('//button [text() = \\'Configure and Publish\\']')\u001b[22m\n\u001b[2m    - locator resolved to <button disabled class=\"btn btn-primary\">Configure and Publish</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not enabled\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not enabled\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    58 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not enabled\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\pages\\surveyPage.ts:22\n\n\u001b[0m \u001b[90m 20 |\u001b[39m     \u001b[36mprivate\u001b[39m \u001b[36masync\u001b[39m waitAndClick(selector\u001b[33m:\u001b[39m string) {\n \u001b[90m 21 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(selector\u001b[33m,\u001b[39m { state\u001b[33m:\u001b[39m \u001b[32m\"visible\"\u001b[39m })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mclick(selector)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m     }\n \u001b[90m 24 |\u001b[39m\n \u001b[90m 25 |\u001b[39m     \u001b[36mprivate\u001b[39m \u001b[36masync\u001b[39m waitAndFill(selector\u001b[33m:\u001b[39m string\u001b[33m,\u001b[39m value\u001b[33m:\u001b[39m string) {\u001b[0m\n\u001b[2m    at SurveyPage.waitAndClick (C:\\keka-engage\\Keka-engage\\pages\\surveyPage.ts:22:25)\u001b[22m\n\u001b[2m    at SurveyPage.configureAndPublishSurvey (C:\\keka-engage\\Keka-engage\\pages\\surveyPage.ts:113:9)\u001b[22m\n\u001b[2m    at C:\\keka-engage\\Keka-engage\\tests\\Survey.spec.ts:152:7\u001b[22m"
+                            }
+                          ],
+                          "stdout": [
+                            {
+                              "text": "Creating a new survey...\n"
+                            },
+                            {
+                              "text": "Toast message verified: Success!Survey creation initiated successfully\n"
+                            },
+                            {
+                              "text": "Adding a short text question...\n"
+                            },
+                            {
+                              "text": "Configuring and publishing survey...\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2025-05-30T14:35:08.769Z",
+                          "attachments": [
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "C:\\keka-engage\\test-results\\Survey-Keka-Engage-Survey--86adc-e-to-exit-and-resume-survey-Chromium\\trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "C:\\keka-engage\\Keka-engage\\pages\\surveyPage.ts",
+                            "column": 25,
+                            "line": 22
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
                     }
                   ],
-                  "status": "expected"
+                  "id": "4d3d75d44e6cfbf3df2b-7e4a17e25b147e5075e6",
+                  "file": "Survey.spec.ts",
+                  "line": 140,
+                  "column": 9
                 }
-              ],
-              "id": "4d3d75d44e6cfbf3df2b-4a1ea0c6a3b422bbc82c",
-              "file": "Survey.spec.ts",
-              "line": 88,
-              "column": 7
+              ]
             }
           ]
         }
@@ -133,11 +171,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-05-29T12:56:27.400Z",
-    "duration": 99815.998,
-    "expected": 1,
+    "startTime": "2025-05-30T14:35:06.504Z",
+    "duration": 100912.792,
+    "expected": 0,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 1,
     "flaky": 0
   }
 }

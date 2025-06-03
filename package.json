@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "Pretest": "node pretest.js",
     "test": "npx playwright test --reporter=html",
     "posttest": "npx ts-node sendReport.ts"
   },
